@@ -1,56 +1,58 @@
 # TKXDPM.KHMT.20231-09
 
-## Nội dung
+## Mục lục
 
 - [TKXDPM.KHMT.20231-09](#tkxdpmkhmt20231-09)
-  - [Nội dung](#nội-dung)
-  - [Quick start](#quick-start)
-  - [What's included](#whats-included)
-  - [Report Content](#report-content)
-  - [Pull request template](#pull-request-template)
+  - [Mục lục](#mục-lục)
+  - [Thông tin nhóm](#thông-tin-nhóm)
+  - [Cấu trúc thư mục](#cấu-trúc-thư-mục)
+  - [Nội dung báo cáo](#nội-dung-báo-cáo)
+  - [Mẫu pull request](#mẫu-pull-request)
 
-## Quick start
+## Thông tin nhóm
 
-Group 09 Information:
+Thông tin thành viên nhóm 09:
 
 | Name                 | Role        |
 | :-------------       | :---------- |
-| Nguyễn Chí Hiếu      | Team Leader |
-| Nguyễn Cao Bảo Hiếu  | Member      |
-| Nguyễn Đình Hiếu     | Member      |
-| Phạm Minh Hiếu       | Member      |
+| Nguyễn Chí Hiếu      | Nhóm trường |
+| Nguyễn Cao Bảo Hiếu  | Thành viên  |
+| Nguyễn Đình Hiếu     | Thành viên  |
+| Phạm Minh Hiếu       | Thành viên  |
 
-## What's included
+## Cấu trúc thư mục
 
-The recommended structure is as follows:
+Cấu trúc trong git bao gồm
 
-- `AIMS`: folder containing the team's AIMS base code
-- `assets`: folder containing images that you want to include in the report file
-- `README.md`: weekly report file, individuals are required to update their tasks and how their do it into this file
-- `Template.md`: template for the weekly report
-- `pull_request_template.md`: pull request's description template
+- `AIMS`: thư mục chứa base code của nhóm
+- `assets`: thư mục chứa các ảnh muốn đưa vào file báo cáo
+- `README.md`: file báo cáo hàng tuần, mỗi cá nhân phải cập nhật nhiệm vụ được giao và cách thực hiện nó vào tệp này
+- `Template.md`: mẫu cho báo cáo hàng tuần
+- `pull_request_template.md`: mẫu mô tả pull request
 
-## Report Content
+## Nội dung báo cáo
 
-The recommended report structure will have a format as follows:
+Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 
 <details>
-  <summary>Week xx Report, where you record the week as Wxx: from date ~ to date. Example: W1: 01/10/2023~08/10/2023 </summary>
+  <summary> W1: 27/11/2023~03/12/2023 </summary>
 <br>
 <details>
-<summary>Team Member 1</summary>
+<summary>Nguyễn Chí Hiếu</summary>
 <br>
 
-- Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+- Nhiệm vụ:
+  - Tạo cấu trúc thư mục git và push base code lên github của nhóm
+  - Tìm hiểu và thực hiện tìm lỗi Content Coupling trong base code
+  - Chạy base code trên Eclipse
 
-- Implementation details:
+- Triển khai chi tiết:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
-  - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+  - Cụ thể triển khai chi tiết:
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    ![image](https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/assets/105554125/fabccfe4-233f-4fe1-8eec-6b1ccea94341)
+
+  - Tìm lỗi Content Coupling trong base code:
 
 </details>
 
