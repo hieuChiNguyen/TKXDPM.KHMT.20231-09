@@ -9,18 +9,17 @@ Template for managing Capstone's project in the Software Design and Construction
   - [What's included](#whats-included)
   - [Report Content](#report-content)
   - [Pull request template](#pull-request-template)
-  - [QA](#qa)
-  - [Creators](#creators)
 
 ## Quick start
 
-Before using this Github repository, everyone needs to register their group information using the table below:
+Group 09 Information:
 
-| Name           | Role        |
-| :------------- | :---------- |
-| Lê Thanh Giang | Team Leader |
-| Nguyễn Văn A   | Member      |
-| Nguyễn Văn B   | Member      |
+| Name                 | Role        |
+| :-------------       | :---------- |
+| Nguyễn Chí Hiếu      | Team Leader |
+| Nguyễn Cao Bảo Hiếu  | Member      |
+| Nguyễn Đình Hiếu     | Member      |
+| Phạm Minh Hiếu       | Member      |
 
 ## What's included
 
