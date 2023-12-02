@@ -1,10 +1,9 @@
-# TKXDPM.VN.20231-01
-Template for managing Capstone's project in the Software Design and Construction course in the 2023.1 semester.
+# TKXDPM.KHMT.20231-09
 
-## Table of contents
+## Nội dung
 
-- [TKXDPM.VN.20231-01](#tkxdpmvn20231-01)
-  - [Table of contents](#table-of-contents)
+- [TKXDPM.KHMT.20231-09](#tkxdpmkhmt20231-09)
+  - [Nội dung](#nội-dung)
   - [Quick start](#quick-start)
   - [What's included](#whats-included)
   - [Report Content](#report-content)
