@@ -120,7 +120,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 
 ---
 
-## Pull request template
+## Mẫu pull request
 
 - You are required to create a pull request according to these steps:
   - Use the `pull_request_template.md` file when writing the description section in the pull request
