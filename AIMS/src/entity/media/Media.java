@@ -66,7 +66,7 @@ public class Media {
         }
         return null;
     }
-
+    
     public List getAllMedia() throws SQLException{
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery("select * from Media");

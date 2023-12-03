@@ -99,7 +99,7 @@ public class PaymentController extends BaseController {
 		}
 		return result;
 	}
-
+	
 	public void emptyCart(){
         Cart.getCart().emptyCart();
     }
