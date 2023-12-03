@@ -57,20 +57,18 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Nguyễn Đình Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Tìm hiểu và thực hiện tìm lỗi Control Coupling trong base code
+  - Chạy base code trên Eclipse
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
-
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - Tìm lỗi Control Coupling trong base code:
 </details>
 
 <details>
