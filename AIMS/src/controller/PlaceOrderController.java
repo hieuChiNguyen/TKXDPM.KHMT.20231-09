@@ -44,6 +44,7 @@ public class PlaceOrderController extends BaseController {
      * @return Order
      * @throws SQLException
      */
+
     // data coupling
     public Order createOrder() throws SQLException {
         Order order = new Order();
@@ -52,6 +53,8 @@ public class PlaceOrderController extends BaseController {
             OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(),
                     cartMedia.getQuantity(),
                     cartMedia.getPrice());
+          
+            // content coupling
             order.getlstOrderMedia().add(orderMedia);
         }
         return order;

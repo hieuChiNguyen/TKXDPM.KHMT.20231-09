@@ -103,4 +103,5 @@ public class PaymentController extends BaseController {
 	public void emptyCart() {
 		Cart.getCart().emptyCart();
 	}
+
 }
