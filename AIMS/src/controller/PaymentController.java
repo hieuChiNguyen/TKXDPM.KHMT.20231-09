@@ -81,6 +81,7 @@ public class PaymentController extends BaseController {
 	 *         message.
 	 */
 	// data coupling
+	//control coupling
 	public Map<String, String> payOrder(int amount, String contents, String cardNumber, String cardHolderName,
 			String expirationDate, String securityCode) {
 		Map<String, String> result = new Hashtable<String, String>();
