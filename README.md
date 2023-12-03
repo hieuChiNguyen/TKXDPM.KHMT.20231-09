@@ -47,7 +47,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Chạy base code trên Eclipse
 
 - Triển khai chi tiết:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/3
   - Cụ thể triển khai chi tiết:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     ![image](https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/assets/105554125/fabccfe4-233f-4fe1-8eec-6b1ccea94341)
