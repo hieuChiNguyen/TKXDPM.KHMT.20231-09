@@ -65,7 +65,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Chạy base code trên Eclipse
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): gh pr checkout 3
   - Specific implementation details:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     - image:
