@@ -68,6 +68,8 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - image:
+    - https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/tree/master/assets/NguyenDinhHieu
     - Tìm lỗi Control Coupling trong base code:
 </details>
 
