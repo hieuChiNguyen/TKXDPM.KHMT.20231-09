@@ -12,12 +12,12 @@ public class CD extends Media {
     String musicType;
     Date releasedDate;
 
-    public CD() throws SQLException{
+    public CD() throws SQLException {
 
     }
 
     public CD(int id, String title, String category, int price, int quantity, String type, String artist,
-            String recordLabel, String musicType, Date releasedDate) throws SQLException{
+            String recordLabel, String musicType, Date releasedDate) throws SQLException {
         super(id, title, category, price, quantity, type);
         this.artist = artist;
         this.recordLabel = recordLabel;
@@ -69,15 +69,16 @@ public class CD extends Media {
     }
 
     @Override
+    // data coupling
     public Media getMediaById(int id) throws SQLException {
-        String sql = "SELECT * FROM "+
-                     "aims.CD " +
-                     "INNER JOIN aims.Media " +
-                     "ON Media.id = CD.id " +
-                     "where Media.id = " + id + ";";
+        String sql = "SELECT * FROM " +
+                "aims.CD " +
+                "INNER JOIN aims.Media " +
+                "ON Media.id = CD.id " +
+                "where Media.id = " + id + ";";
         ResultSet res = stm.executeQuery(sql);
-		if(res.next()) {
-            
+        if (res.next()) {
+
             // from media table
             String title = "";
             String type = res.getString("type");
@@ -90,13 +91,13 @@ public class CD extends Media {
             String recordLabel = res.getString("recordLabel");
             String musicType = res.getString("musicType");
             Date releasedDate = res.getDate("releasedDate");
-           
-            return new CD(id, title, category, price, quantity, type, 
-                          artist, recordLabel, musicType, releasedDate);
-            
-		} else {
-			throw new SQLException();
-		}
+
+            return new CD(id, title, category, price, quantity, type,
+                    artist, recordLabel, musicType, releasedDate);
+
+        } else {
+            throw new SQLException();
+        }
     }
 
     @Override
