@@ -82,7 +82,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Chạy base code
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/1
   - Specific implementation details:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     - Tìm lỗi Data Coupling trong base code
@@ -97,7 +97,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Tìm lỗi stamp coupling trong base code
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/4
   - Specific implementation details:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     - Tìm stamp coupling trong base code
