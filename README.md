@@ -89,19 +89,18 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Phạm Minh Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Chạy base code 
+  - Tìm lỗi stamp coupling trong base code
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - Tìm stamp coupling trong base code
 
 </details>
 
