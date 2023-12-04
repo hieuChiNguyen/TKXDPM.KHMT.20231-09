@@ -34,6 +34,7 @@ public class PlaceOrderController extends BaseController {
      * @throws SQLException
      */
     // data coupling
+    //control coupling
     public void placeOrder() throws SQLException {
         Cart.getCart().checkAvailabilityOfProduct();
     }
@@ -45,6 +46,7 @@ public class PlaceOrderController extends BaseController {
      * @throws SQLException
      */
 
+    //control coupling
     // data coupling
     public Order createOrder() throws SQLException {
         Order order = new Order();

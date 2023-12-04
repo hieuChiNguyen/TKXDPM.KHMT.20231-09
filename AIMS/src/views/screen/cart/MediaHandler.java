@@ -69,7 +69,7 @@ public class MediaHandler extends FXMLScreenHandler {
 		this.cartMedia = cartMedia;
 		setMediaInfo();
 	}
-
+//control coupling
 	private void setMediaInfo() {
 		title.setText(cartMedia.getMedia().getTitle());
 		price.setText(Utils.getCurrencyFormat(cartMedia.getPrice()));
