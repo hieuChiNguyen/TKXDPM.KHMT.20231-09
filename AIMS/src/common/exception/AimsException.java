@@ -6,6 +6,8 @@ package common.exception;;
  * 
  * @author nguyenlm
  */
+
+//functional cohesion
 public class AimsException extends RuntimeException {
 
     public AimsException() {

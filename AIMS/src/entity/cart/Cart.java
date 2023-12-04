@@ -6,6 +6,8 @@ import java.util.List;
 
 import common.exception.MediaNotAvailableException;
 import entity.media.Media;
+//functional: các phương thức đều liên quan chặt chẽ đến quản lý giỏ hàng và các sản phẩm trong giỏ hàng.
+//comunicational: Các phương thức tương tác chặt chẽ với các thành phần bên trong class để thực hiện các chức năng quản lý giỏ hàng.
 
 public class Cart {
 

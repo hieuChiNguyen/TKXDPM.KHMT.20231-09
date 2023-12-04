@@ -11,6 +11,7 @@ import entity.media.Media;
  * 
  * @author nguyenlm
  */
+//functional cohesion
 public class HomeController extends BaseController {
 
     /**

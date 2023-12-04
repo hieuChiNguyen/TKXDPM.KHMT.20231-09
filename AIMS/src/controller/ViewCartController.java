@@ -12,6 +12,9 @@ import entity.cart.CartMedia;
  * 
  * @author nguyenlm
  */
+
+//functional: chủ yếu tập trung vào việc kiểm tra sự khả dụng của các sản phẩm trong giỏ hàng.
+//comunication:  tương tác để kiểm tra sự khả dụng của sản phẩm trong giỏ hàng
 public class ViewCartController extends BaseController {
 
     /**
