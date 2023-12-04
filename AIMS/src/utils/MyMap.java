@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * The {@link utils.MyMap JSON} class represents JSON objects. 
+ * The {@link utils.MyMap JSON} class represents JSON objects.
  * To create a new JSON object,
  * JSON jsonObject = new JSON();
  * jsonObject.put("key", value);
@@ -24,6 +24,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 *         https://hg.openjdk.java.net/jdk8/jdk8/jdk/file/tip/src/share/classes/java/util/Hashtable.java
 	 * @return a {@link java.lang.String String}.
 	 */
+	// logical cohesion
 	public String toJSON() {
 		int max = size() - 1;
 		if (max == -1)
@@ -41,11 +42,11 @@ public class MyMap extends LinkedHashMap<String, Object> {
 			sb.append(':');
 			sb.append(value instanceof MyMap ? ((MyMap) value).toJSON() : ('"' + value.toString() + '"'));
 
-//			if (value instanceof MyMap) {
-//				sb.append(((MyMap) value).toJSON());
-//			} else {
-//				sb.append('"' + value.toString() + '"');
-//			}
+			// if (value instanceof MyMap) {
+			// sb.append(((MyMap) value).toJSON());
+			// } else {
+			// sb.append('"' + value.toString() + '"');
+			// }
 			if (i == max)
 				return sb.append('}').toString();
 			sb.append(",");
@@ -64,6 +65,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * @throws IllegalAccessException
 	 * @throws IllegalArgumentException
 	 */
+	// logical cohesion
 	public static Map<String, Object> toMyMap(Object obj) throws IllegalArgumentException, IllegalAccessException {
 		Map<String, Object> map = new MyMap();
 		for (Field field : obj.getClass().getDeclaredFields()) {
@@ -89,10 +91,10 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * 2 double quote.
 	 * 
 	 * @author hieudm
-	 * @param 
-	 * str - {@link java.lang.String String}
-	 * idx - the index of the open quote
-	 * @return the term as {@link java.lang.String String} 
+	 * @param
+	 * str        - {@link java.lang.String String}
+	 *            idx - the index of the open quote
+	 * @return the term as {@link java.lang.String String}
 	 * @throws IllegalArgumentException
 	 */
 	private static String getNextTerm(String str, int idx) {
@@ -118,14 +120,17 @@ public class MyMap extends LinkedHashMap<String, Object> {
 		offset = result.length() + 2; // update iterator with the term and the 2 double quotes
 		return sb.toString();
 	}
+
 	/**
-	 * Return a {@link utils.MyMap MyMap} that represents the interested substring in a {@link java.lang.String String}.
+	 * Return a {@link utils.MyMap MyMap} that represents the interested substring
+	 * in a {@link java.lang.String String}.
 	 * 
 	 * @author hieudm
-	 * @param 
-	 * str - {@link java.lang.String String}
-	 * idx - the index of the first character in the interested substring in the {@link java.lang.String String}
-	 * @return the term as {@link utils.MyMap MyMap} 
+	 * @param
+	 * str        - {@link java.lang.String String}
+	 *            idx - the index of the first character in the interested substring
+	 *            in the {@link java.lang.String String}
+	 * @return the term as {@link utils.MyMap MyMap}
 	 * @throws IllegalArgumentException
 	 */
 	public static MyMap toMyMap(String str, int idx) throws IllegalArgumentException {

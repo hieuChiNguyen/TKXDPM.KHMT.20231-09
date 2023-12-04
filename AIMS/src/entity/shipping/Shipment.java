@@ -1,12 +1,14 @@
 package entity.shipping;
 
 public class Shipment {
-    
-    public void validateDeliveryInfo(){
+
+    // logical cohesion
+    public void validateDeliveryInfo() {
         // TODO: implement later on
     }
 
-    public Shipment createNewShipment(){
+    // coincidental cohesion
+    public Shipment createNewShipment() {
         // TODO: implement later on
         return new Shipment();
     }

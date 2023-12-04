@@ -29,11 +29,13 @@ public class InterbankSubsystemController {
 		return null;
 	}
 
+	// coincidental cohesion
 	private String generateData(Map<String, Object> data) {
 		return ((MyMap) data).toJSON();
 	}
 
 	// data coupling
+	// logical cohesion
 	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
 		Map<String, Object> transaction = new MyMap();
 
@@ -65,6 +67,7 @@ public class InterbankSubsystemController {
 	}
 
 	// data coupling
+	// logical cohesion
 	private PaymentTransaction makePaymentTransaction(MyMap response) {
 		if (response == null)
 			return null;

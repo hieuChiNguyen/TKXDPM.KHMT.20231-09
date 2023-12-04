@@ -5,30 +5,30 @@ import entity.cart.CartMedia;
 import entity.media.Media;
 
 public class User {
-    
+
     private int id;
     private String name;
     private String email;
     private String address;
     private String phone;
 
-    public User(int id, String name, String email, String address, String phone){
+    public User(int id, String name, String email, String address, String phone) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.address = address;
         this.phone = phone;
     }
-    
+
     // override toString method
     @Override
     public String toString() {
         return "{" +
-            "  username='" + name + "'" +
-            ", email='" + email + "'" +
-            ", address='" + address + "'" +
-            ", phone='" + phone + "'" +
-            "}";
+                "  username='" + name + "'" +
+                ", email='" + email + "'" +
+                ", address='" + address + "'" +
+                ", phone='" + phone + "'" +
+                "}";
     }
 
     // getter and setter
@@ -63,5 +63,5 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    
+
 }

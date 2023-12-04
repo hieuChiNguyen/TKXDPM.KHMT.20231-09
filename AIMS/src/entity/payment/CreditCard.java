@@ -2,6 +2,7 @@ package entity.payment;
 
 import java.sql.Timestamp;
 
+//coincidental cohesion
 public class CreditCard {
 	private String cardCode;
 	private String owner;

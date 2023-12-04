@@ -2,8 +2,9 @@ package entity.order;
 
 import entity.media.Media;
 
+//coincidental cohesion
 public class OrderMedia {
-    
+
     private Media media;
     private int price;
     private int quantity;
@@ -13,16 +14,16 @@ public class OrderMedia {
         this.quantity = quantity;
         this.price = price;
     }
-    
+
     @Override
     public String toString() {
         return "{" +
-            "  media='" + media + "'" +
-            ", quantity='" + quantity + "'" +
-            ", price='" + price + "'" +
-            "}";
+                "  media='" + media + "'" +
+                ", quantity='" + quantity + "'" +
+                ", price='" + price + "'" +
+                "}";
     }
-    
+
     public Media getMedia() {
         return this.media;
     }
