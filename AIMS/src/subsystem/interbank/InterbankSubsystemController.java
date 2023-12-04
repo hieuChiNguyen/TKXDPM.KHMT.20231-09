@@ -28,11 +28,12 @@ public class InterbankSubsystemController {
 	public PaymentTransaction refund(CreditCard card, int amount, String contents) {
 		return null;
 	}
-	
+
 	private String generateData(Map<String, Object> data) {
 		return ((MyMap) data).toJSON();
 	}
 
+	// data coupling
 	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
 		Map<String, Object> transaction = new MyMap();
 
@@ -50,7 +51,7 @@ public class InterbankSubsystemController {
 		Map<String, Object> requestMap = new MyMap();
 		requestMap.put("version", VERSION);
 		requestMap.put("transaction", transaction);
-
+//control coupling
 		String responseText = interbankBoundary.query(Configs.PROCESS_TRANSACTION_URL, generateData(requestMap));
 		MyMap response = null;
 		try {
@@ -63,6 +64,7 @@ public class InterbankSubsystemController {
 		return makePaymentTransaction(response);
 	}
 
+	// data coupling
 	private PaymentTransaction makePaymentTransaction(MyMap response) {
 		if (response == null)
 			return null;
@@ -74,24 +76,24 @@ public class InterbankSubsystemController {
 				Integer.parseInt((String) transcation.get("amount")), (String) transcation.get("createdAt"));
 
 		switch (trans.getErrorCode()) {
-		case "00":
-			break;
-		case "01":
-			throw new InvalidCardException();
-		case "02":
-			throw new NotEnoughBalanceException();
-		case "03":
-			throw new InternalServerErrorException();
-		case "04":
-			throw new SuspiciousTransactionException();
-		case "05":
-			throw new NotEnoughTransactionInfoException();
-		case "06":
-			throw new InvalidVersionException();
-		case "07":
-			throw new InvalidTransactionAmountException();
-		default:
-			throw new UnrecognizedException();
+			case "00":
+				break;
+			case "01":
+				throw new InvalidCardException();
+			case "02":
+				throw new NotEnoughBalanceException();
+			case "03":
+				throw new InternalServerErrorException();
+			case "04":
+				throw new SuspiciousTransactionException();
+			case "05":
+				throw new NotEnoughTransactionInfoException();
+			case "06":
+				throw new InvalidVersionException();
+			case "07":
+				throw new InvalidTransactionAmountException();
+			default:
+				throw new UnrecognizedException();
 		}
 
 		return trans;

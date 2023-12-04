@@ -43,6 +43,7 @@ public class PlaceOrderController extends BaseController{
      * @throws SQLException
      */
     
+    
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {

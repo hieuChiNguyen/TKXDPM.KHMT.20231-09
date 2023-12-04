@@ -47,63 +47,60 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Chạy base code trên Eclipse
 
 - Triển khai chi tiết:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/3
   - Cụ thể triển khai chi tiết:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     ![image](https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/assets/105554125/fabccfe4-233f-4fe1-8eec-6b1ccea94341)
 
-  - Tìm lỗi Content Coupling trong base code:
+  - Tìm lỗi Content Coupling, Common Coupling trong base code
 
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Nguyễn Đình Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Tìm hiểu và thực hiện tìm lỗi Control Coupling trong base code
+  - Chạy base code trên Eclipse
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): gh pr checkout 3
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
-
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - image:
+    - https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/tree/master/assets/NguyenDinhHieu
+    - Tìm lỗi Control Coupling trong base code:
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Tìm hiểu và thực hiện tìm lỗi Data Coupling trong base code
+  - Chạy base code
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/1
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
-
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - Tìm lỗi Data Coupling trong base code
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Phạm Minh Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Chạy base code 
+  - Tìm lỗi stamp coupling trong base code
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/4
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - Tìm stamp coupling trong base code
 
 </details>
 
