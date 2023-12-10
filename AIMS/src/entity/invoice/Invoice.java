@@ -6,12 +6,12 @@ public class Invoice {
 
     private Order order;
     private int amount;
-    
-    public Invoice(){
+
+    public Invoice() {
 
     }
 
-    public Invoice(Order order){
+    public Invoice(Order order) {
         this.order = order;
     }
 
@@ -27,7 +27,7 @@ public class Invoice {
         return amount;
     }
 
-    public void saveInvoice(){
-        
+    public void saveInvoice() {
+
     }
 }

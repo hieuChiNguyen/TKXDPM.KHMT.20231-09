@@ -25,6 +25,7 @@ public class API {
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	private static Logger LOGGER = Utils.getLogger(Utils.class.getName());
 
+	// logical cohesion
 	public static String get(String url, String token) throws Exception {
 		LOGGER.info("Request URL: " + url + "\n");
 		URL line_api_url = new URL(url);
@@ -47,8 +48,9 @@ public class API {
 
 	int var;
 
+	// logical cohesion
 	public static String post(String url, String data
-//			, String token
+	// , String token
 	) throws IOException {
 		allowMethods("PATCH");
 		URL line_api_url = new URL(url);
@@ -59,7 +61,7 @@ public class API {
 		conn.setDoOutput(true);
 		conn.setRequestMethod("PATCH");
 		conn.setRequestProperty("Content-Type", "application/json");
-//		conn.setRequestProperty("Authorization", "Bearer " + token);
+		// conn.setRequestProperty("Authorization", "Bearer " + token);
 		Writer writer = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
 		writer.write(payload);
 		writer.close();

@@ -1,5 +1,6 @@
 package entity.payment;
 
+//coincidental cohesion
 public class PaymentTransaction {
 	private String errorCode;
 	private CreditCard card;
@@ -7,7 +8,7 @@ public class PaymentTransaction {
 	private String transactionContent;
 	private int amount;
 	private String createdAt;
-	
+
 	public PaymentTransaction(String errorCode, CreditCard card, String transactionId, String transactionContent,
 			int amount, String createdAt) {
 		super();
@@ -18,7 +19,7 @@ public class PaymentTransaction {
 		this.amount = amount;
 		this.createdAt = createdAt;
 	}
-	
+
 	public String getErrorCode() {
 		return errorCode;
 	}

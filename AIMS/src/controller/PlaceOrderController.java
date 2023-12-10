@@ -96,6 +96,7 @@ public class PlaceOrderController extends BaseController {
 
     }
 
+    // logical cohesion
     public boolean validatePhoneNumber(String phoneNumber) {
         // TODO: your work
         return false;

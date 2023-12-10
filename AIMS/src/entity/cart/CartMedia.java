@@ -3,12 +3,12 @@ package entity.cart;
 import entity.media.Media;
 
 public class CartMedia {
-    
+
     private Media media;
     private int quantity;
     private int price;
 
-    public CartMedia(){
+    public CartMedia() {
 
     }
 
@@ -17,7 +17,7 @@ public class CartMedia {
         this.quantity = quantity;
         this.price = price;
     }
-    
+
     public Media getMedia() {
         return this.media;
     }
@@ -44,12 +44,10 @@ public class CartMedia {
 
     @Override
     public String toString() {
-        return "{" 
-            + " media='" + media + "'" 
-            + ", quantity='" + quantity + "'" 
-            + "}";
+        return "{"
+                + " media='" + media + "'"
+                + ", quantity='" + quantity + "'"
+                + "}";
     }
 
 }
-
-    
