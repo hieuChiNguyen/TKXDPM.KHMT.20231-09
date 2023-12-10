@@ -1,5 +1,5 @@
 package common.exception;
-
+//functional cohesion
 public class NotEnoughBalanceException extends PaymentException{
 
 	public NotEnoughBalanceException() {

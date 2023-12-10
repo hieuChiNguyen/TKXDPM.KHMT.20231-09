@@ -12,6 +12,9 @@ import entity.payment.PaymentTransaction;
  * @author hieud
  * 
  */
+
+//functional cohesion: định nghĩa các phương thức chính liên quan đến quá trình thanh toán và hoàn tiền
+//comunicational cohesion: tất cả các phương thức đều liên quan chặt chẽ đến việc giao tiếp với ngân hàng. Các phương thức đều liên quan đến quá trình thanh toán và hoàn tiền. 
 public interface InterbankInterface {
 
 	/**

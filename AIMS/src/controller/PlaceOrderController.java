@@ -20,6 +20,8 @@ import views.screen.popup.PopupScreen;
  * 
  * @author nguyenlm
  */
+//comunicational cohesion: các phương thức tương tác và giao tiếp chặt chẽ để thực hiện quy trình đặt hàng và xử lý thông tin giao hàng. Các phương thức như placeOrder, createOrder, createInvoice, và calculateShippingFee liên quan chặt chẽ trong quá trình thực hiện đặt hàng và tính phí vận chuyển.
+//functional cohesion: Các phương thức chủ yếu tập trung vào các chức năng liên quan đến quá trình đặt hàng và xử lý thông tin giao hàng
 public class PlaceOrderController extends BaseController {
 
     /**
