@@ -109,39 +109,69 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 ---
 
 <details>
-  <summary>W2: 01/10/2023~08/10/2023 </summary>
+  <summary>W2: 04/12/2023~10/12/2023 </summary>
 <br>
 <details>
-<summary>Team Member 1</summary>
+<summary>Nguyễn Chí Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Thống nhất các use case cần làm và phân công cho các thành viên trong nhóm 
+  - Nhận use case Quản lý danh sách đơn hàng bên admin
+  - Tìm temporal cohesion và procedural cohesion trong base code
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Tìm temporal cohesion và procedural cohesion trong base code
 
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Thống nhất các use case cần làm
+  - Nhận use case Hủy đơn hàng
+  - Tìm coincidental cohesion và logical cohesion trong base code
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Tìm coincidental cohesion và logical cohesion trong base code
+
+</details>
+
+<details>
+<summary>Nguyễn Đình Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Thống nhất các use case cần làm
+  - Nhận use case Sắp xếp, tìm kiếm sản phẩm
+  - Tìm communicational cohesion và functional cohesion trong base code
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm communicational cohesion và functional cohesion trong base code
+
+</details>
+
+<details>
+<summary>Phạm Minh Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Thống nhất các use case cần làm
+  - Nhận use case Hủy đơn hàng
+  - Kiểm tra lại xem các cohesion tìm được đã hợp lý chưa
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Kiểm tra lại xem các cohesion tìm được đã hợp lý chưa
 
 </details>
 
