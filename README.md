@@ -179,6 +179,26 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 
 ---
 
+<details>
+  <summary>W3: 11/12/2023~17/12/2023 </summary>
+<br>
+<details>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm và sửa nếu vi phạm nguyên tắc chữ L và I (Liskov Substitution or Interface Segregation principle).
+  - Tiếp tục thực hiện use case Canel Order
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm temporal cohesion và procedural cohesion trong base code
+
+</details>
+
+---
+
 ## Mẫu pull request
 
 - You are required to create a pull request according to these steps:
