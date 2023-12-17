@@ -47,12 +47,12 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Chạy base code trên Eclipse
 
 - Triển khai chi tiết:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/3
   - Cụ thể triển khai chi tiết:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     ![image](https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/assets/105554125/fabccfe4-233f-4fe1-8eec-6b1ccea94341)
 
-  - Tìm lỗi Content Coupling trong base code:
+  - Tìm lỗi Content Coupling, Common Coupling trong base code
 
 </details>
 
@@ -65,7 +65,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Chạy base code trên Eclipse
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/2
   - Specific implementation details:
     - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
     - image:
@@ -74,36 +74,33 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Tìm hiểu và thực hiện tìm lỗi Data Coupling trong base code
+  - Chạy base code
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/1
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
-
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - Tìm lỗi Data Coupling trong base code
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Phạm Minh Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Chạy base code 
+  - Tìm lỗi stamp coupling trong base code
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/4
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Chạy base code trên Eclipse : thực hiện theo các bước trong file README.md trong thư mục AIMS
+    - Tìm stamp coupling trong base code
 
 </details>
 
@@ -112,39 +109,69 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 ---
 
 <details>
-  <summary>W2: 01/10/2023~08/10/2023 </summary>
+  <summary>W2: 04/12/2023~10/12/2023 </summary>
 <br>
 <details>
-<summary>Team Member 1</summary>
+<summary>Nguyễn Chí Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Thống nhất các use case cần làm và phân công cho các thành viên trong nhóm 
+  - Nhận use case Quản lý danh sách đơn hàng bên admin
+  - Tìm temporal cohesion và procedural cohesion trong base code
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Tìm temporal cohesion và procedural cohesion trong base code
 
 </details>
 
 <details>
-<summary>Team Member 2</summary>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Thống nhất các use case cần làm
+  - Nhận use case Hủy đơn hàng
+  - Tìm coincidental cohesion và logical cohesion trong base code
 
 - Implementation details:
   - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Tìm coincidental cohesion và logical cohesion trong base code
+
+</details>
+
+<details>
+<summary>Nguyễn Đình Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Thống nhất các use case cần làm
+  - Nhận use case Sắp xếp, tìm kiếm sản phẩm
+  - Tìm communicational cohesion và functional cohesion trong base code
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm communicational cohesion và functional cohesion trong base code
+
+</details>
+
+<details>
+<summary>Phạm Minh Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Thống nhất các use case cần làm
+  - Nhận use case Hủy đơn hàng
+  - Kiểm tra lại xem các cohesion tìm được đã hợp lý chưa
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Kiểm tra lại xem các cohesion tìm được đã hợp lý chưa
 
 </details>
 

@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
 import views.screen.popup.PopupScreen;
-
+//functional cohesion: phần lớn các hàm của paymenrScreenHandler xoay quanh việc xử lý thanh toán và hiển thị kết quả
 public class PaymentScreenHandler extends BaseScreenHandler {
 
 	@FXML
@@ -36,7 +36,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 	public PaymentScreenHandler(Stage stage, String screenPath, Invoice invoice) throws IOException {
 		super(stage, screenPath);
 		this.invoice = invoice;
-		
+		//control coupling
 		btnConfirmPayment.setOnMouseClicked(e -> {
 			try {
 				confirmToPayOrder();

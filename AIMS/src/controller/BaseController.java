@@ -10,6 +10,9 @@ import entity.media.Media;
  * This class is the base controller for our AIMS project
  * @author nguyenlm
  */
+
+
+//functional cohesion: các phương thức của lớp xoay quanh việc quản lý giỏ hàng cart
 public class BaseController {
     
     /**
@@ -17,6 +20,7 @@ public class BaseController {
      * @param media
      * @return CartMedia or null
      */
+	
     public CartMedia checkMediaInCart(Media media){
         return Cart.getCart().checkMediaInCart(media);
     }
@@ -28,4 +32,5 @@ public class BaseController {
     public List getListCartMedia(){
         return Cart.getCart().getListMedia();
     }
+    
 }

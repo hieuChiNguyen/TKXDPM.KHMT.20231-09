@@ -6,6 +6,8 @@ package common.exception;
  * 
  * @author nguyenlm
  */
+
+//functional cohesion
 public class PlaceOrderException extends AimsException {
 
 	private static final long serialVersionUID = 1091337136123906298L;

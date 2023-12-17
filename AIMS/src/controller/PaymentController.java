@@ -20,6 +20,9 @@ import subsystem.InterbankSubsystem;
  * @author hieud
  *
  */
+
+//functional cohesion:  chủ yếu điều khiển quá trình thanh toán trong hệ thống AIMS. Các phương thức chủ yếu tập trung vào các chức năng cụ thể như thanh toán đơn hàng (payOrder) và làm trống giỏ hàng 
+//comunicational cohesion: 
 public class PaymentController extends BaseController {
 
 	/**
@@ -81,6 +84,7 @@ public class PaymentController extends BaseController {
 	 *         message.
 	 */
 	// data coupling
+	//control coupling
 	public Map<String, String> payOrder(int amount, String contents, String cardNumber, String cardHolderName,
 			String expirationDate, String securityCode) {
 		Map<String, String> result = new Hashtable<String, String>();
@@ -103,4 +107,5 @@ public class PaymentController extends BaseController {
 	public void emptyCart() {
 		Cart.getCart().emptyCart();
 	}
+
 }

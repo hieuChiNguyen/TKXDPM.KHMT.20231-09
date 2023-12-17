@@ -58,6 +58,8 @@ public class MediaHandler extends FXMLScreenHandler{
                 if (mediaInCart != null) {
                     mediaInCart.setQuantity(mediaInCart.getQuantity() + 1);
                 }else{
+                	// content coupling
+                	
                     CartMedia cartMedia = new CartMedia(media, cart, spinnerChangeNumber.getValue(), media.getPrice());
                     cart.getListMedia().add(cartMedia);
                     LOGGER.info("Added " + cartMedia.getQuantity() + " " + media.getTitle() + " to cart");

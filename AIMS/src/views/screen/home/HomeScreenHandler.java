@@ -103,7 +103,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         aimsImage.setOnMouseClicked(e -> {
             addMediaHome(this.homeItems);
         });
-        
+        //control coupling
         cartImage.setOnMouseClicked(e -> {
             CartScreenHandler cartScreen;
             try {

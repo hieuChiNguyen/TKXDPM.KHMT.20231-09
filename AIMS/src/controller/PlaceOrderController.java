@@ -20,7 +20,17 @@ import views.screen.popup.PopupScreen;
  * 
  * @author nguyenlm
  */
+// comunicational cohesion: các phương thức tương tác và giao tiếp chặt chẽ để
+// thực hiện quy trình đặt hàng và xử lý thông tin giao hàng. Các phương thức
+// như placeOrder, createOrder, createInvoice, và calculateShippingFee liên quan
+// chặt chẽ trong quá trình thực hiện đặt hàng và tính phí vận chuyển.
+// functional cohesion: Các phương thức chủ yếu tập trung vào các chức năng liên
+// quan đến quá trình đặt hàng và xử lý thông tin giao hàng
 public class PlaceOrderController extends BaseController {
+
+    // procedural cohesion
+
+public class PlaceOrderController extends BaseController{
 
     /**
      * Just for logging purpose
@@ -28,30 +38,29 @@ public class PlaceOrderController extends BaseController {
     private static Logger LOGGER = utils.Utils.getLogger(PlaceOrderController.class.getName());
 
     /**
-     * This method checks the avalibility of product when user click PlaceOrder
-     * button
-     * 
+     * This method checks the avalibility of product when user click PlaceOrder button
      * @throws SQLException
      */
-    // data coupling
-    public void placeOrder() throws SQLException {
+    public void placeOrder() throws SQLException{
         Cart.getCart().checkAvailabilityOfProduct();
     }
 
     /**
      * This method creates the new Order based on the Cart
-     * 
      * @return Order
      * @throws SQLException
      */
-    // data coupling
-    public Order createOrder() throws SQLException {
+    
+    
+    public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
             CartMedia cartMedia = (CartMedia) object;
-            OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(),
-                    cartMedia.getQuantity(),
-                    cartMedia.getPrice());
+            OrderMedia orderMedia = new OrderMedia(cartMedia.getMedia(), 
+                                                   cartMedia.getQuantity(), 
+                                                   cartMedia.getPrice());    
+            
+            // content coupling
             order.getlstOrderMedia().add(orderMedia);
         }
         return order;
@@ -59,7 +68,6 @@ public class PlaceOrderController extends BaseController {
 
     /**
      * This method creates the new Invoice based on order
-     * 
      * @param order
      * @return Invoice
      */
@@ -69,54 +77,54 @@ public class PlaceOrderController extends BaseController {
 
     /**
      * This method takes responsibility for processing the shipping info from user
-     * 
      * @param info
      * @throws InterruptedException
      * @throws IOException
      */
-    public void processDeliveryInfo(HashMap info) throws InterruptedException, IOException {
+    public void processDeliveryInfo(HashMap info) throws InterruptedException, IOException{
         LOGGER.info("Process Delivery Info");
         LOGGER.info(info.toString());
         validateDeliveryInfo(info);
     }
-
+    
     /**
-     * The method validates the info
-     * 
-     * @param info
-     * @throws InterruptedException
-     * @throws IOException
-     */
-    public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException {
-
+   * The method validates the info
+   * @param info
+   * @throws InterruptedException
+   * @throws IOException
+   */
+    public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException{
+    	
     }
 
     // logical cohesion
+    
     public boolean validatePhoneNumber(String phoneNumber) {
-        // TODO: your work
-        return false;
+    	// TODO: your work
+    	return false;
     }
-
+    
     public boolean validateName(String name) {
-        // TODO: your work
-        return false;
+    	// TODO: your work
+    	return false;
     }
-
+    
     public boolean validateAddress(String address) {
-        // TODO: your work
-        return false;
+    	// TODO: your work
+    	return false;
     }
+    
 
     /**
      * This method calculates the shipping fees of order
-     * 
      * @param order
      * @return shippingFee
      */
-    public int calculateShippingFee(Order order) {
+    public int calculateShippingFee(Order order){
         Random rand = new Random();
-        int fees = (int) (((rand.nextFloat() * 10) / 100) * order.getAmount());
+        int fees = (int)( ( (rand.nextFloat()*10)/100 ) * order.getAmount() );
         LOGGER.info("Order Amount: " + order.getAmount() + " -- Shipping Fees: " + fees);
         return fees;
     }
+    
 }
