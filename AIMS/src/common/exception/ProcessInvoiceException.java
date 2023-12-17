@@ -3,8 +3,6 @@ package common.exception;;
 /**
  * The ProcessInvoiceException wraps all unchecked exceptions You can use this
  * exception to inform 
- * 
- * @author nguyenlm
  */
 public class ProcessInvoiceException extends AimsException {
 

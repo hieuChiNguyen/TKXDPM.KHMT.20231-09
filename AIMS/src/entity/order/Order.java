@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import utils.Configs;
+import entity.invoice.Invoice;
 
 public class Order {
     
-    private int shippingFees;
+    private int shippingFee;
     private List lstOrderMedia;
+    private Invoice invoice;
+    
     private HashMap<String, String> deliveryInfo;
 
     public Order(){
@@ -36,12 +38,12 @@ public class Order {
         this.lstOrderMedia = lstOrderMedia;
     }
 
-    public void setShippingFees(int shippingFees) {
-        this.shippingFees = shippingFees;
+    public void setShippingFee(int shippingFee) {
+        this.shippingFee = shippingFee;
     }
 
-    public int getShippingFees() {
-        return shippingFees;
+    public int getShippingFee() {
+        return shippingFee;
     }
 
     public HashMap getDeliveryInfo() {
@@ -51,14 +53,9 @@ public class Order {
     public void setDeliveryInfo(HashMap deliveryInfo) {
         this.deliveryInfo = deliveryInfo;
     }
-
-    public int getAmount(){
-        double amount = 0;
-        for (Object object : lstOrderMedia) {
-            OrderMedia om = (OrderMedia) object;
-            amount += om.getPrice();
-        }
-        return (int) (amount + (Configs.PERCENT_VAT/100)*amount);
+    
+    public Invoice getInvoice() {
+        return invoice;
     }
 
 }

@@ -1,78 +1,96 @@
 package views.screen.payment;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.Map;
 
 import controller.PaymentController;
-import entity.cart.Cart;
-import common.exception.PlaceOrderException;
 import entity.invoice.Invoice;
-import javafx.application.Platform;
+import entity.order.Order;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import subsystem.vnpay.VNPayConfig;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
-import views.screen.popup.PopupScreen;
 
 public class PaymentScreenHandler extends BaseScreenHandler {
 
-	@FXML
-	private Button btnConfirmPayment;
-
-	@FXML
-	private ImageView loadingImage;
-
 	private Invoice invoice;
-
-	public PaymentScreenHandler(Stage stage, String screenPath, int amount, String contents) throws IOException {
-		super(stage, screenPath);
-	}
-
-	public PaymentScreenHandler(Stage stage, String screenPath, Invoice invoice) throws IOException {
-		super(stage, screenPath);
-		this.invoice = invoice;
-		//control coupling
-		btnConfirmPayment.setOnMouseClicked(e -> {
-			try {
-				confirmToPayOrder();
-				((PaymentController) getBController()).emptyCart();
-			} catch (Exception exp) {
-				System.out.println(exp.getStackTrace());
-			}
-		});
-	}
-
 	@FXML
 	private Label pageTitle;
-
 	@FXML
-	private TextField cardNumber;
+	private VBox vBox;
 
-	@FXML
-	private TextField holderName;
+	public PaymentScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
+		super(stage, screenPath);
+		this.invoice = order.getInvoice();
+		this.setBController(new PaymentController());
+		WebView paymentView = new WebView();
+		WebEngine webEngine = paymentView.getEngine();
+		webEngine.load(((PaymentController) getBController()).generateURL(invoice.getTotalPrice(), "Thanh toán hóa đơn"));
+		webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
+			handleUrlChanged(newValue);
+		});
+		vBox.getChildren().clear();
+		vBox.getChildren().add(paymentView);
+	}
 
-	@FXML
-	private TextField expirationDate;
+	// Hàm chuyển đổi query string thành Map
+	private static Map<String, String> parseQueryString(String query) {
+		Map<String, String> params = new HashMap<>();
+		if (query != null && !query.isEmpty()) {
+			String[] pairs = query.split("&");
+			for (String pair : pairs) {
+				String[] keyValue = pair.split("=");
+				if (keyValue.length == 2) {
+					params.put(keyValue[0], keyValue[1]);
+				}
+			}
+		}
+		return params;
+	}
 
-	@FXML
-	private TextField securityCode;
+	private void handleUrlChanged(String newValue) {
+		if (newValue.contains(VNPayConfig.vnp_ReturnUrl)) {
+			try {
+				URI uri = new URI(newValue);
+				String query = uri.getQuery();
+				System.out.println(query);
 
-	void confirmToPayOrder() throws IOException{
-		String contents = "pay order";
-		PaymentController ctrl = (PaymentController) getBController();
-		Map<String, String> response = ctrl.payOrder(invoice.getAmount(), contents, cardNumber.getText(), holderName.getText(),
-				expirationDate.getText(), securityCode.getText());
+				Map<String, String> params = parseQueryString(query);
 
-		BaseScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH, response.get("RESULT"), response.get("MESSAGE") );
+				confirmToPayOrder(params);
+
+			} catch (URISyntaxException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * @throws IOException
+	 */
+	void confirmToPayOrder(Map<String, String> res) throws IOException {
+
+		PaymentController controller = (PaymentController) getBController();
+		Map<String, String> response = controller.payOrder(res);
+
+		BaseScreenHandler resultScreen = new ResultScreenHandler(this.stage, Configs.RESULT_SCREEN_PATH,
+				response.get("RESULT"), response.get("MESSAGE"));
+		controller.emptyCart();
 		resultScreen.setPreviousScreen(this);
 		resultScreen.setHomeScreenHandler(homeScreenHandler);
 		resultScreen.setScreenTitle("Result Screen");
 		resultScreen.show();
+
 	}
 
 }

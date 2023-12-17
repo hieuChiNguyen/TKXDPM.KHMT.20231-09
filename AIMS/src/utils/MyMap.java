@@ -10,17 +10,12 @@ import java.util.Map;
  * To create a new JSON object,
  * JSON jsonObject = new JSON();
  * jsonObject.put("key", value);
- * 
- * @author hieud
- *
  */
 public class MyMap extends LinkedHashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Return a {@link java.lang.String String} that represents the JSON object.
-	 * 
-	 * @author hieudm
 	 *         https://hg.openjdk.java.net/jdk8/jdk8/jdk/file/tip/src/share/classes/java/util/Hashtable.java
 	 * @return a {@link java.lang.String String}.
 	 */
@@ -40,12 +35,6 @@ public class MyMap extends LinkedHashMap<String, Object> {
 			sb.append('"' + key.toString() + '"');
 			sb.append(':');
 			sb.append(value instanceof MyMap ? ((MyMap) value).toJSON() : ('"' + value.toString() + '"'));
-
-//			if (value instanceof MyMap) {
-//				sb.append(((MyMap) value).toJSON());
-//			} else {
-//				sb.append('"' + value.toString() + '"');
-//			}
 			if (i == max)
 				return sb.append('}').toString();
 			sb.append(",");

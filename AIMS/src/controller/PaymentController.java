@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Hashtable;
 import java.util.Map;
@@ -8,34 +9,25 @@ import common.exception.InvalidCardException;
 import common.exception.PaymentException;
 import common.exception.UnrecognizedException;
 import entity.cart.Cart;
-import entity.payment.CreditCard;
 import entity.payment.PaymentTransaction;
-import subsystem.InterbankInterface;
-import subsystem.InterbankSubsystem;
+import subsystem.VNPayInterface;
+import subsystem.VNPaySubsystem;
 
 /**
  * This {@code PaymentController} class control the flow of the payment process
  * in our AIMS Software.
- * 
- * @author hieud
- *
  */
 public class PaymentController extends BaseController {
 
 	/**
-	 * Represent the card used for payment
+	 * Represent the VNPay subsystem
 	 */
-	private CreditCard card;
-
-	/**
-	 * Represent the Interbank subsystem
-	 */
-	private InterbankInterface interbank;
+	private VNPayInterface vnpay;
 
 	/**
 	 * Validate the input date which should be in the format "mm/yy", and then
 	 * return a {@link java.lang.String String} representing the date in the
-	 * required format "mmyy" .
+	 * required format "mm/yy" .
 	 * 
 	 * @param date - the {@link java.lang.String String} represents the input date
 	 * @return {@link java.lang.String String} - date representation of the required
@@ -43,56 +35,38 @@ public class PaymentController extends BaseController {
 	 * @throws InvalidCardException - if the string does not represent a valid date
 	 *                              in the expected format
 	 */
-	private String getExpirationDate(String date) throws InvalidCardException {
-		String[] strs = date.split("/");
-		if (strs.length != 2) {
-			throw new InvalidCardException();
-		}
+	
+//	private String getExpirationDate(String date) throws InvalidCardException {
+//		String[] strs = date.split("/");
+//		if (strs.length != 2) {
+//			throw new InvalidCardException();
+//		}
+//
+//		String expirationDate = null;
+//		int month = -1;
+//		int year = -1;
+//
+//		try {
+//			month = Integer.parseInt(strs[0]);
+//			year = Integer.parseInt(strs[1]);
+//			if (month < 1 || month > 12 || year < Calendar.getInstance().get(Calendar.YEAR) % 100 || year > 100) {
+//				throw new InvalidCardException();
+//			}
+//			expirationDate = strs[0] + strs[1];
+//
+//		} catch (Exception ex) {
+//			throw new InvalidCardException();
+//		}
+//
+//		return expirationDate;
+//	}
 
-		String expirationDate = null;
-		int month = -1;
-		int year = -1;
-
-		try {
-			month = Integer.parseInt(strs[0]);
-			year = Integer.parseInt(strs[1]);
-			if (month < 1 || month > 12 || year < Calendar.getInstance().get(Calendar.YEAR) % 100 || year > 100) {
-				throw new InvalidCardException();
-			}
-			expirationDate = strs[0] + strs[1];
-
-		} catch (Exception ex) {
-			throw new InvalidCardException();
-		}
-
-		return expirationDate;
-	}
-
-	/**
-	 * Pay order, and then return the result with a message.
-	 * 
-	 * @param amount         - the amount to pay
-	 * @param contents       - the transaction contents
-	 * @param cardNumber     - the card number
-	 * @param cardHolderName - the card holder name
-	 * @param expirationDate - the expiration date in the format "mm/yy"
-	 * @param securityCode   - the cvv/cvc code of the credit card
-	 * @return {@link java.util.Map Map} represent the payment result with a
-	 *         message.
-	 */
-	// data coupling
-	//control coupling
-	public Map<String, String> payOrder(int amount, String contents, String cardNumber, String cardHolderName,
-			String expirationDate, String securityCode) {
+	public Map<String, String> payOrder(Map<String, String> response) {
 		Map<String, String> result = new Hashtable<String, String>();
 		result.put("RESULT", "PAYMENT FAILED!");
 		try {
-			this.card = new CreditCard(cardNumber, cardHolderName, Integer.parseInt(securityCode),
-					getExpirationDate(expirationDate));
-
-			this.interbank = new InterbankSubsystem();
-			PaymentTransaction transaction = interbank.payOrder(card, amount, contents);
-
+			this.vnpay = new VNPaySubsystem();
+			PaymentTransaction transaction = vnpay.makePaymentTransaction(response);
 			result.put("RESULT", "PAYMENT SUCCESSFUL!");
 			result.put("MESSAGE", "You have succesffully paid the order!");
 		} catch (PaymentException | UnrecognizedException ex) {
@@ -100,7 +74,12 @@ public class PaymentController extends BaseController {
 		}
 		return result;
 	}
-
+	
+	public String generateURL(int amount, String content) throws IOException {
+		this.vnpay = new VNPaySubsystem();
+		return vnpay.generatePayUrl(amount, content);
+	}
+	
 	public void emptyCart() {
 		Cart.getCart().emptyCart();
 	}

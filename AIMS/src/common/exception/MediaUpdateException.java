@@ -3,8 +3,6 @@ package common.exception;;
 /**
  * The MediaUpdateException wraps all unchecked exceptions You can use this
  * exception to inform
- * 
- * @author nguyenlm
  */
 public class MediaUpdateException extends AimsException {
 
