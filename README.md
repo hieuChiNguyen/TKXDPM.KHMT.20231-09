@@ -197,6 +197,21 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 
 </details>
 
+<details>
+<summary>Nguyễn Chí Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm và sửa nếu vi phạm nguyên tắc Single Responsibility Principle
+  - Tiếp tục thực hiện use case Quản lý đơn hàng
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Single Responsibility Principle
+
+</details>
+</details>
 ---
 
 ## Mẫu pull request
