@@ -211,6 +211,20 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
     - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Single Responsibility Principle
 
 </details>
+<details>
+<summary>Nguyễn Đình Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm và sửa nếu vi phạm nguyên tắc Open/closed principle
+  - Tiếp tục tìm hiểu và thực hiện use case Sắp xếp, tìm kiếm sản phẩm
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Open/closed principle
+
+</details>
 </details>
 ---
 
