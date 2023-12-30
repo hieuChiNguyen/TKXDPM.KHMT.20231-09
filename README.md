@@ -220,7 +220,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Tiếp tục tìm hiểu và thực hiện use case Sắp xếp, tìm kiếm sản phẩm
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/13
   - Specific implementation details:
     - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Open/closed principle
 
