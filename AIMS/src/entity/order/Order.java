@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 
 import utils.Configs;
+//lớp Order đang phụ thuộc trực tiếp vào cụm từ "vat" thông qua Configs.PERCENT_VAT. Điều này làm cho lớp Order trở nên cứng nhắc và khó mở rộng khi cần thêm các quy tắc mới liên quan đến việc tính toán giá trị đơn hàng.
 
+// khắc phục: sử dụng một hình thức chiến lược (Strategy Pattern) hoặc một hình thức Dependency Injection để giảm sự phụ thuộc trực tiếp vào Configs.PERCENT_VAT
 public class Order {
 
     private int shippingFees;

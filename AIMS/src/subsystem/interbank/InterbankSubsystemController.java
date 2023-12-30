@@ -36,6 +36,18 @@ public class InterbankSubsystemController {
 
 	// data coupling
 	// logical cohesion
+	//OCP:
+	//sử dụng trực tiếp Configs.PROCESS_TRANSACTION_URL. 
+	//Nếu URL này thay đổi, sẽ cần phải sửa đổi mã nguồn. 
+	//Điều này làm giảm tính mở rộng của mã nguồn.
+	//khắc phục: chuyển URL như một tham số hoặc sử dụng một cơ chế cấu hình để giảm sự phụ thuộc
+
+	//Lớp InterbankSubsystemController phụ thuộc trực tiếp vào InterbankBoundary, điều này làm cho mã nguồn không mở rộng được. 
+	//Nếu muốn thay đổi phương thức gửi yêu cầu (query) hay thay đổi triển khai của InterbankBoundary, sẽ cần phải sửa đổi mã nguồn ở đây.
+	//khắc phục: chuyển các giá trị cấu hình hoặc triển khai của InterbankBoundary qua các tham số của phương thức hoặc thông qua constructor.
+
+	//sử dụng trực tiếp MyMap, đây có thể là một vấn đề nếu bạn muốn thay đổi hoặc mở rộng cách bạn xử lý dữ liệu JSON. 
+	//khắc phục: sử dụng một thư viện JSON hoặc một cơ chế đối tượng ánh xạ từ JSON sang đối tượng.
 	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
 		Map<String, Object> transaction = new MyMap();
 

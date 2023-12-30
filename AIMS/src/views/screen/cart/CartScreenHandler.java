@@ -101,6 +101,10 @@ public class CartScreenHandler extends BaseScreenHandler {
 		show();
 	}
 
+
+	//OCP:
+	//Trong requestToPlaceOrder, gọi các phương thức cụ thể của PlaceOrderController. Nếu PlaceOrderController thay đổi (thêm hoặc xóa phương thức), sẽ cần sửa đổi class CartScreenHandler. 
+	//khắc phục: sử dụng một giao diện hoặc một lớp trừu tượng để giao tiếp với PlaceOrderController mà không cần biết chi tiết cụ thể của nó.
 	public void requestToPlaceOrder() throws SQLException, IOException {
 		try {
 			// create placeOrderController and process the order
