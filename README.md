@@ -179,6 +179,55 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 
 ---
 
+<details>
+  <summary>W3: 11/12/2023~17/12/2023 </summary>
+<br>
+<details>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm và sửa nếu vi phạm nguyên tắc chữ L và I (Liskov Substitution or Interface Segregation principle).
+  - Tiếp tục thực hiện use case Canel Order
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm temporal cohesion và procedural cohesion trong base code
+
+</details>
+
+<details>
+<summary>Nguyễn Chí Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm và sửa nếu vi phạm nguyên tắc Single Responsibility Principle
+  - Tiếp tục thực hiện use case Quản lý đơn hàng
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+    - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Single Responsibility Principle
+
+</details>
+<details>
+<summary>Nguyễn Đình Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm và sửa nếu vi phạm nguyên tắc Open/closed principle
+  - Tiếp tục tìm hiểu và thực hiện use case Sắp xếp, tìm kiếm sản phẩm
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/13
+  - Specific implementation details:
+    - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Open/closed principle
+
+</details>
+</details>
+---
+
 ## Mẫu pull request
 
 - You are required to create a pull request according to these steps:
