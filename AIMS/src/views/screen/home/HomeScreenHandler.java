@@ -23,6 +23,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -64,6 +65,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     private SplitMenuButton splitMenuBtnSearch;
 
     private List homeItems;
+    
+    @FXML
+    private TextField myTextField;
 
     public HomeScreenHandler(Stage stage, String screenPath) throws IOException{
         super(stage, screenPath);
@@ -103,7 +107,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         aimsImage.setOnMouseClicked(e -> {
             addMediaHome(this.homeItems);
         });
-        //control coupling
+        
         cartImage.setOnMouseClicked(e -> {
             CartScreenHandler cartScreen;
             try {
@@ -182,6 +186,26 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         menuButton.getItems().add(position, menuItem);
     }
 
-    
+    @FXML
+    private void handleTextFieldAction() {
+        String enteredText = myTextField.getText();
+        // empty home media
+        hboxMedia.getChildren().forEach(node -> {
+            VBox vBox = (VBox) node;
+            vBox.getChildren().clear();
+        });
+        
+        // filter only media with the choosen category
+        List filteredItems = new ArrayList<>();
+        homeItems.forEach(me -> {
+            MediaHandler media = (MediaHandler) me;
+            if(media.getMedia().getTitle().toLowerCase().contains(enteredText.toLowerCase())) {
+            	filteredItems.add(media);;
+            }
+        });
+        
+     // fill out the home with filted media as category
+        addMediaHome(filteredItems);
+    }
     
 }
