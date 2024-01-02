@@ -13,3 +13,7 @@ public class Shipment {
         return new Shipment();
     }
 }
+//OCP
+//phương thức validateDeliveryInfo và createNewShipment đều không liên quan chặt chẽ và có thể dẫn đến vấn đề khi muốn thay đổi hoặc mở rộng chúng.
+
+//khắc phục: tách chúng thành các lớp hoặc giao diện riêng biệt

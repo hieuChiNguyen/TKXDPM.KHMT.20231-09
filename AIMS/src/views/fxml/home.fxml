@@ -37,9 +37,9 @@
                <children>
                   <Pane prefHeight="102.0" prefWidth="562.0">
                      <children>
-                        <TextField layoutX="17.0" layoutY="27.0" prefHeight="48.0" prefWidth="528.0">
+                        <TextField fx:id="myTextField" onAction="#handleTextFieldAction" layoutX="17.0" layoutY="27.0" prefHeight="48.0" prefWidth="528.0">
                            <font>
-                              <Font size="18.0" />
+                              <Font size="18.0"/> 
                            </font></TextField>
                      </children>
                   </Pane>
@@ -64,7 +64,7 @@
                            <image>
                               <Image url="@../../../../../../../../../../mnt/nguyenlm/DriveD/Documents/UNIVERSITY/PERSONAL/PROJECT/Java/TA-TKXDPM/AIMS/assets/images/cart.png" />
                            </image>
-                        </ImageView>
+                        </ImageView> 
                         <Label fx:id="numMediaInCart" layoutX="24.0" layoutY="11.0" prefHeight="16.0" prefWidth="64.0" text="0 media" textFill="#5091e6" />
                      </children>
                   </Pane>

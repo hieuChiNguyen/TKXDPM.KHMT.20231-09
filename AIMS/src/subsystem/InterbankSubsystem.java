@@ -25,6 +25,16 @@ public class InterbankSubsystem implements InterbankInterface {
 	 * Initializes a newly created {@code InterbankSubsystem} object so that it
 	 * represents an Interbank subsystem.
 	 */
+
+	//OCP:
+	//Lớp InterbankSubsystem phụ thuộc chặt chẽ vào InterbankSubsystemController. 
+	//khi muốn thêm một chức năng mới hoặc thay đổi hành vi, có thể phải sửa đổi lớp InterbankSubsystem
+
+	//Đối tượng ctrl được khởi tạo trong hàm tạo của InterbankSubsystem. 
+	//Nếu muốn thêm một loại controller mới hoặc thay đổi hành vi của controller, sẽ cần sửa đổi mã nguồn của lớp InterbankSubsystem
+
+	//khắc phục: sử dụng dependency injection để đưa controller vào InterbankSubsystem, chẳng hạn thông qua một interface. 
+	//Điều này giúp đảm bảo rằng InterbankSubsystem không phải sửa đổi khi có sự thay đổi trong controller.
 	public InterbankSubsystem() {
 		String str = new String();
 		this.ctrl = new InterbankSubsystemController();

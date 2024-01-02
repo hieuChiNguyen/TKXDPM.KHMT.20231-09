@@ -62,6 +62,8 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 	@FXML
 	private TextField securityCode;
 
+//OCP: Phương thức này có thể được chia thành các bước cụ thể hoặc các phương thức nhỏ để giảm độ phức tạp và làm cho mã nguồn dễ đọc hơn. 
+//Mỗi bước có thể được triển khai trong một phương thức mới hoặc một lớp con
 	void confirmToPayOrder() throws IOException{
 		String contents = "pay order";
 		PaymentController ctrl = (PaymentController) getBController();

@@ -63,6 +63,8 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
 		this.province.getItems().addAll(Configs.PROVINCES);
 	}
 
+	//OCP: Lí do chính là trong phương thức submitDeliveryInfo, đang sử dụng một try-catch để xử lý ngoại lệ InvalidDeliveryInfoException, và sau đó lại thực hiện throw new InvalidDeliveryInfoException(e.getMessage()). 
+	//Điều này có thể làm cho mã nguồn trở nên phức tạp hơn, và không thể mở rộng chức năng một cách dễ dàng mà không sửa đổi mã nguồn.
 	@FXML
 	void submitDeliveryInfo(MouseEvent event) throws IOException, InterruptedException, SQLException {
 

@@ -52,6 +52,7 @@ public class Media {
     }
 
     // data coupling
+    //Phương thức này chỉ truy vấn bảng Media, nếu muốn thêm các loại phương tiện khác (ví dụ: CD, Book), sẽ cần thêm các phương thức mới hoặc sửa đổi phương thức hiện tại để xử lý từng loại.
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM Media ;";
         Statement stm = AIMSDB.getConnection().createStatement();

@@ -26,6 +26,9 @@ public class API {
 	private static Logger LOGGER = Utils.getLogger(Utils.class.getName());
 
 	// logical cohesion
+	//OCP:
+	//Phương thức get và post này có thể cần thêm các thông số để định rõ hơn cách nó nên thực hiện gọi HTTP (ví dụ: headers, query parameters).
+	//Nếu muốn thêm một loại phương thức HTTP mới hoặc cần thay đổi cách phương thức này hoạt động, sẽ phải sửa đổi phương thức get.
 	public static String get(String url, String token) throws Exception {
 		LOGGER.info("Request URL: " + url + "\n");
 		URL line_api_url = new URL(url);
@@ -80,6 +83,9 @@ public class API {
 		return response.toString();
 	}
 
+//OCP:
+//Phương thức này thay đổi giá trị của một trường static trong HttpURLConnection, làm thay đổi cách mà các phương thức HTTP được xử lý.
+//Nếu thêm một loại phương thức HTTP mới sẽ phải sửa đổi phương thức allowMethods
 	private static void allowMethods(String... methods) {
 		try {
 			Field methodsField = HttpURLConnection.class.getDeclaredField("methods");

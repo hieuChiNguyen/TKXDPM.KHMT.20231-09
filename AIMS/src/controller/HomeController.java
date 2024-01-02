@@ -24,5 +24,7 @@ public class HomeController extends BaseController {
     public List getAllMedia() throws SQLException {
         return new Media().getAllMedia();
     }
+    //OCP
+    //tạo 1 interface hoặc abstract có 1 phương thức getAllMedia để có thể triển khai nó với các lớp cụ thể cho các loại Media khác nhau mà không làm ảnh hưởng đến HomeController
 
 }
