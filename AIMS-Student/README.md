@@ -36,6 +36,6 @@ Import `JUnit5` library under `Eclipse` -> `Project` -> `Properties` -> `Java Bu
 ### Add VM arguments
 Click on `Run` -> `Run Configurations...`  -> `Java Application`, create a new launch configuration for your project and add these VM arguments:
 - For Linux distro: 
-> `--module-path lib/linux/javafx-sdk-15 --add-modules javafx.controls,javafx.fxml`
+> `--module-path lib/linux/javafx-sdk-15 --add-modules javafx.controls,javafx.fxml,javafx.web`
 - For Windows:
-> `--module-path lib/win/javafx-sdk-15 --add-modules javafx.controls,javafx.fxml`
+> `--module-path lib/win/javafx-sdk-15 --add-modules javafx.controls,javafx.fxml,javafx.web`
