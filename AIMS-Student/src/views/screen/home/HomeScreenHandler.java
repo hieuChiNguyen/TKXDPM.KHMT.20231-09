@@ -4,11 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.logging.Logger;
 
 import common.exception.ViewCartException;
@@ -19,10 +15,7 @@ import entity.cart.Cart;
 import entity.media.Media;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -58,7 +51,14 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
 
     @FXML private SplitMenuButton splitMenuBtnSearch;
 
+    @FXML private Button BtnSort;
+
+    @FXML private TextField myTextField;
+
     private List homeItems;
+
+    private List<MediaHandler> filteredItemsSort;
+    private List<Integer> priceItems;
 
     public HomeScreenHandler(Stage stage, String screenPath) throws IOException{
         super(stage, screenPath);
@@ -153,12 +153,15 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             VBox vBox = (VBox) node;
             vBox.getChildren().clear();
         });
+        priceItems = new ArrayList<>();
+        filteredItemsSort = items;
         while(!mediaItems.isEmpty()){
             hboxMedia.getChildren().forEach(node -> {
                 int vid = hboxMedia.getChildren().indexOf(node);
                 VBox vBox = (VBox) node;
                 while(vBox.getChildren().size()<3 && !mediaItems.isEmpty()){
                     MediaHandler media = (MediaHandler) mediaItems.get(0);
+                    priceItems.add(media.getMedia().getPrice());
                     vBox.getChildren().add(media.getContent());
                     mediaItems.remove(media);
                 }
@@ -194,5 +197,50 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             addMediaHome(filteredItems);
         });
         menuButton.getItems().add(position, menuItem);
+    }
+
+    @FXML
+    private void handleTextFieldAction() {
+        String enteredText = myTextField.getText();
+        // empty home media
+        hboxMedia.getChildren().forEach(node -> {
+            VBox vBox = (VBox) node;
+            vBox.getChildren().clear();
+        });
+        // filter only media with the choosen category
+        List filteredItems = new ArrayList<>();
+        homeItems.forEach(me -> {
+            MediaHandler media = (MediaHandler) me;
+            if(media.getMedia().getTitle().toLowerCase().contains(enteredText.toLowerCase())) {
+                filteredItems.add(media);;
+            }
+        });
+
+        // fill out the home with filted media as category
+        addMediaHome(filteredItems);
+    }
+
+    @FXML
+    private void handleSortAction() {
+        hboxMedia.getChildren().forEach(node -> {
+            VBox vBox = (VBox) node;
+            vBox.getChildren().clear();
+        });
+        // filter only media with the choosen category
+        Collections.sort(priceItems);
+        List<MediaHandler> filteredItemsSortAfter = new ArrayList<>();
+        int j=0;
+        for (int i : priceItems) {
+            if (j == i) continue;
+            j=i;
+            filteredItemsSort.forEach(me -> {
+                MediaHandler media = me;
+                if (media.getMedia().getPrice() == i) {
+                    filteredItemsSortAfter.add(media);
+                }
+            });
+        }
+        // fill out the home with filted media as category
+        addMediaHome(filteredItemsSortAfter);
     }
 }
