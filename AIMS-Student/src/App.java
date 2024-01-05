@@ -45,6 +45,12 @@ public class App extends Application {
 				fadeOut.play();
 			});
 
+			// closer server
+			primaryStage.setOnCloseRequest(event -> {
+				// Đóng server ở đây
+				ServerManager.stopServer();
+			});
+
 			// After fade out, load actual content
 			fadeOut.setOnFinished((e) -> {
 				try {
@@ -52,6 +58,7 @@ public class App extends Application {
 					homeHandler.setScreenTitle("Home Screen");
 					homeHandler.setImage();
 					homeHandler.show();
+					ServerManager.startServer();
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
@@ -64,5 +71,5 @@ public class App extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 }

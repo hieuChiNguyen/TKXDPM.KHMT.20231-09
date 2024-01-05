@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Order Payment Info</title>
+    <script>
+        function parseQueryParams(url) {
+            const queryParams = {};
+            const queryString = url.split('?')[1];
+            if (queryString) {
+                const params = queryString.split('&');
+                for (let param of params) {
+                    const [key, value] = param.split('=');
+                    queryParams[key] = decodeURIComponent(value.replace(/\+/g, ' '));
+                }
+            }
+            return queryParams;
+        }
+        window.onload = function () {
+            // Trích xuất các tham số từ URL
+            const currentURL = window.location.href;
+
+            // Trích xuất các tham số từ URL
+            const queryParams = parseQueryParams(currentURL);
+            const vnp_Amount = queryParams.vnp_Amount;
+            const vnp_BankCode = queryParams.vnp_BankCode;
+            const vnp_BankTranNo = queryParams.vnp_BankTranNo;
+            const vnp_CardType = queryParams.vnp_CardType;
+            const vnp_OrderInfo = queryParams.vnp_OrderInfo;
+            const vnp_PayDate = queryParams.vnp_PayDate;
+            const dateString = vnp_PayDate;
+            const year = dateString.substr(0, 4);
+            const month = dateString.substr(4, 2) - 1; // Giảm 1 vì tháng trong đối tượng Date bắt đầu từ 0 (0 - 11)
+            const day = dateString.substr(6, 2);
+            const hours = dateString.substr(8, 2);
+            const minutes = dateString.substr(10, 2);
+            const seconds = dateString.substr(12, 2);
+
+            const date = new Date(year, month, day, hours, minutes, seconds);
+
+            // Lấy các giá trị ngày và giờ từ đối tượng Date
+            const convertedYear = date.getFullYear();
+            const convertedMonth = date.getMonth() + 1; // Tháng cộng thêm 1 vì tháng trong đối tượng Date bắt đầu từ 0 (0 - 11)
+            const convertedDay = date.getDate();
+            const convertedHours = date.getHours();
+            const convertedMinutes = date.getMinutes();
+            const convertedSeconds = date.getSeconds();
+            const orderDate = `${convertedYear}-${convertedMonth}-${convertedDay} ${convertedHours}:${convertedMinutes}:${convertedSeconds}`
+
+            const vnp_ResponseCode = queryParams.vnp_ResponseCode;
+            const vnp_TmnCode = queryParams.vnp_TmnCode;
+            const vnp_TransactionNo = queryParams.vnp_TransactionNo;
+            const vnp_TransactionStatus = queryParams.vnp_TransactionStatus;
+            const vnp_TxnRef = queryParams.vnp_TxnRef;
+            const vnp_SecureHash = queryParams.vnp_SecureHash;
+            console.log(vnp_Amount);
+
+            // Cập nhật nội dung của các phần tử trong HTML dựa trên các tham số
+            document.getElementById('vnp_TmnCode').textContent = vnp_TmnCode;
+            document.getElementById('vnp_TxnRef').textContent = vnp_TxnRef;
+            document.getElementById('vnp_Amount').textContent = vnp_Amount;
+            document.getElementById('vnp_ResponseCode').textContent = vnp_ResponseCode;
+            document.getElementById('vnp_TransactionNo').textContent = vnp_TransactionNo;
+            document.getElementById('vnp_BankCode').textContent = vnp_BankCode;
+            document.getElementById('vnp_PayDate').textContent = " Thanh toan don hang " + orderDate;
+            document.getElementById("myForm").action = window.location.href;
+        };
+        function myFunction() {
+            alert("Clicked");
+        }
+    </script>
+    <style>
+        /* Khai báo các quy tắc CSS */
+        body {
+            width: 80%;
+            margin: 0 auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        button {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: #aa2b04;
+            color: white;
+        }
+
+        .cancelbtn {
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AIMS System - Team 9</h1>
+    <h2>Giao dịch được thực hiện thành công. Cảm ơn quý khách đã sử dụng dịch vụ</h2>
+    <table>
+        <tr>
+            <th id="name_col">Name</th>
+            <th id="value-col">Value</th>
+        </tr>
+        <tr>
+            <td>Merchant ID</td>
+            <td id='vnp_TmnCode'></td>
+        </tr>
+        <tr>
+            <td>Merchant Name</td>
+            <td>VN Pay Information</td>
+        </tr>
+        <tr>
+            <td>Merchant Transaction Reference</td>
+            <td id='vnp_TxnRef'></td>
+        </tr>
+        <tr>
+            <td>Transaction Info</td>
+            <td id='vnp_PayDate'></td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td id='vnp_Amount'></td>
+        </tr>
+        <tr>
+            <td>Current Code</td>
+            <td>VND</td>
+        </tr>
+        <tr>
+            <td>Transaction Response Code</td>
+            <td id='vnp_ResponseCode'></td>
+        </tr>
+
+        <tr>
+            <td>Message</td>
+            <td>Giao dịch được thực hiện thành công. Cảm ơn quý khách đã sử dụng dịch vụ</td>
+        </tr>
+        <tr>
+            <td>Transaction Number</td>
+            <td id='vnp_TransactionNo'></td>
+        </tr>
+        <tr>
+            <td>Bank</td>
+            <td id='vnp_BankCode'></td>
+        </tr>
+        <!-- Thêm các hàng khác tùy ý -->
+    </table>
+
+    <div class="cancelbtn">
+       <form method="POST" action="" id="myForm">
+        <button class="button" type="submit">Cancel Order</button>
+    </form>
+    </div>
+
+</body>
+
+</html>

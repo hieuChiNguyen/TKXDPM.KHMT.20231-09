@@ -8,10 +8,12 @@ import entity.shipping.DeliveryInfo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Order {
 
@@ -108,12 +110,12 @@ public class Order {
         return (int) (rushShippingCost + regularShippingCost);
     }
 
-    public static void saveNewOrder(Order order) throws SQLException {
+    public static int saveNewOrder(Order order) throws SQLException {
         String sqlStatement = "INSERT INTO `Order` (email, address, phone, userID, shipping_fee, status, province, rush_shipping_time, shipping_instruction, rush_shipping_instruction, is_rush_shipping) "
                 + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         Connection connection = AIMSDB.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(sqlStatement);
+        PreparedStatement preparedStatement = connection.prepareStatement(sqlStatement, Statement.RETURN_GENERATED_KEYS);
 
         preparedStatement.setString(1, order.getDeliveryInfo().getEmail());
         preparedStatement.setString(2, order.getDeliveryInfo().getShippingAddress());
@@ -128,12 +130,19 @@ public class Order {
         preparedStatement.setInt(11, order.getDeliveryInfo().isRushShipping() ? 1 : 0);
 
         int rowsAffected = preparedStatement.executeUpdate();
+        int generatedId = -1;
 
         if (rowsAffected > 0) {
+        	ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                generatedId = generatedKeys.getInt(1);
+                System.out.println("ID của đơn hàng: " + generatedId);
+            }
             System.out.println("Đã thêm thông tin Order vào cơ sở dữ liệu thành công!");
         } else {
             System.out.println("Thêm thông tin Order vào cơ sở dữ liệu không thành công!");
         }
+        return generatedId;
     }
 
     public static List<Order> getAllOrders() throws SQLException {
@@ -175,5 +184,47 @@ public class Order {
         preparedStatement.setString(1, newState);
         preparedStatement.setInt(2, id);
         preparedStatement.executeUpdate();
+    }
+    
+    public static Order getOrderById(int orderId) throws SQLException {
+        String sql = "SELECT * FROM `Order` WHERE id = ?";
+        Connection connection = AIMSDB.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, orderId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        if (resultSet.next()) {
+            OrderDto orderDto = new OrderDto(
+                    resultSet.getInt("id"),
+                    resultSet.getString("email"),
+                    resultSet.getString("address"),
+                    resultSet.getString("phone"),
+                    resultSet.getInt("userID"),
+                    resultSet.getInt("shipping_fee"),
+                    resultSet.getString("status"),
+                    resultSet.getString("rush_shipping_time"),
+                    resultSet.getString("province"),
+                    resultSet.getString("shipping_instruction"),
+                    resultSet.getString("rush_shipping_instruction"),
+                    resultSet.getInt("is_rush_shipping"));
+
+            return new Order(orderDto);
+        }
+
+        return null;
+    }
+
+    public static void deleteOrderById(int orderId) throws SQLException {
+        String sql = "DELETE FROM `Order` WHERE id = ?";
+        Connection connection = AIMSDB.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, orderId);
+        int rowsAffected = preparedStatement.executeUpdate();
+
+        if (rowsAffected > 0) {
+            System.out.println("Đã xóa đơn hàng thành công!");
+        } else {
+            System.out.println("Xóa đơn hàng không thành công! Không tìm thấy đơn hàng với ID đã cho.");
+        }
     }
 }

@@ -20,6 +20,10 @@ import subsystem.vnpay.ConfigVNPay;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
 
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.util.Properties;
+
 public class PaymentScreenHandler extends BaseScreenHandler {
 
 	private Invoice invoice;
@@ -27,17 +31,20 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 	private Label pageTitle;
 	@FXML
 	private VBox vBox;
-
+	
 	private Order order;
+	
+	private int id;
 
 	public PaymentScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
 		super(stage, screenPath);
 		this.invoice = order.getInvoice();
-		this.order = order;
+		this.order =order;
 		this.setBController(new PaymentController());
 		WebView paymentView = new WebView();
 		WebEngine webEngine = paymentView.getEngine();
-		webEngine.load(((PaymentController) getBController()).generateURL(invoice.calculateTotalPrice(), "Thanh toán hóa đơn"));
+		webEngine.load(
+				((PaymentController) getBController()).generateURL(invoice.getTotalPrice(), "Thanh toán hóa đơn"));
 		webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
 			handleUrlChanged(newValue);
 		});
@@ -65,19 +72,21 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 			try {
 				URI uri = new URI(newValue);
 				String query = uri.getQuery();
-				System.out.println(query);
+				System.out.println("chuỗi uri " + uri);
+				System.out.println("chuỗi api" + query);
 
 				Map<String, String> params = parseQueryString(query);
 
 				confirmToPayOrder(params);
-				Order.saveNewOrder(order);
-
+                Integer id = Order.saveNewOrder(order);
+				// Gửi URI đến email
+				sendEmailWithURI(uri.toString(), id);
 			} catch (URISyntaxException | IOException e) {
 				e.printStackTrace();
 			} catch (SQLException e) {
                 throw new RuntimeException(e);
-            }
-        }
+			}
+		}
 	}
 
 	/**
@@ -96,6 +105,54 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 		resultScreen.setScreenTitle("Result Screen");
 		resultScreen.show();
 
+	}
+
+	private void sendEmailWithURI(String uri, int id) {
+		// Thông tin tài khoản email nguồn
+		String senderEmail = "baohieu888@gmail.com";
+		String senderPassword = "gwni riqq zzwo lljq";
+
+		// Thông tin tài khoản email đích
+		String recipientEmail = "baohieu888@gmail.com";
+
+		// Cấu hình Java Mail
+		Properties props = new Properties();
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.starttls.enable", "true");
+		props.put("mail.smtp.host", "smtp.gmail.com");
+		props.put("mail.smtp.port", "465");
+		props.put("mail.smtp.socketFactory.port", "465");
+		props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+		props.put("mail.smtp.socketFactory.fallback", "false");
+
+		// Tạo đối tượng Session
+		Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(senderEmail, senderPassword);
+			}
+		});
+
+		try {
+			// Tạo đối tượng Message
+			Message message = new MimeMessage(session);
+			message.setFrom(new InternetAddress(senderEmail));
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
+			message.setSubject("Thanh toán thành công");
+
+			// Tạo nội dung email
+			String content = "Xin chào,\n\nCảm ơn bạn đã lựa chọn AIMS project từ nhóm 9!\n\nDưới đây là URL để bạn xem lại thông tin "
+					+ "thanh toán của mình:\n" + uri +"&order_id="+id;
+
+			// Thiết lập nội dung email
+			message.setText(content);
+
+			// Gửi email
+			Transport.send(message);
+
+			System.out.println("Email sended!");
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

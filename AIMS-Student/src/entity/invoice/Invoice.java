@@ -69,7 +69,7 @@ public class Invoice {
         double amount = 0;
         for (Object object : listOrderMedia) {
             OrderMedia om = (OrderMedia) object;
-            amount += om.getPrice();
+            amount += om.getMedia().getPrice()*om.getQuantity();
         }
         return (int) (amount + (Configs.PERCENT_VAT/100)*amount);
     }
@@ -79,7 +79,7 @@ public class Invoice {
         double amount = 0;
         for (Object object : listOrderMedia) {
             OrderMedia om = (OrderMedia) object;
-            amount += om.getPrice();
+            amount += om.getMedia().getPrice()*om.getQuantity();
         }
         return (int) (amount);
     }
