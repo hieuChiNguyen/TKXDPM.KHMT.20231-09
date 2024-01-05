@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+    <title> Order Payment Info</title>
+    <script>
+        window.onload = function () {
+            // Trích xuất các tham số từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const vnp_Amount = urlParams.get('vnp_Amount');
+            const vnp_BankCode = urlParams.get('vnp_BankCode');
+            const vnp_BankTranNo = urlParams.get('vnp_BankTranNo');
+            const vnp_CardType = urlParams.get('vnp_CardType');
+            const vnp_OrderInfo = urlParams.get('vnp_OrderInfo');
+            const vnp_PayDate = urlParams.get('vnp_PayDate');
+            const vnp_ResponseCode = urlParams.get('vnp_ResponseCode');
+            const vnp_TmnCode = urlParams.get('vnp_TmnCode');
+            const vnp_TransactionNo = urlParams.get('vnp_TransactionNo');
+            const vnp_TransactionStatus = urlParams.get('vnp_TransactionStatus');
+            const vnp_TxnRef = urlParams.get('vnp_TxnRef');
+            const vnp_SecureHash = urlParams.get('vnp_SecureHash');
+
+            // Cập nhật nội dung của các phần tử trong HTML dựa trên các tham số
+            document.getElementById('vnp_TmnCode').textContent = vnp_TmnCode;
+            document.getElementById('vnp_TxnRef').textContent = vnp_TxnRef;
+            document.getElementById('vnp_OrderInfo').textContent = vnp_OrderInfo;
+            document.getElementById('vnp_Amount').textContent = vnp_Amount;
+            document.getElementById('vnp_ResponseCode').textContent = vnp_ResponseCode;
+            document.getElementById('vnp_TransactionNo').textContent = vnp_TransactionNo;
+            document.getElementById('vnp_BankCode').textContent = vnp_BankCode;
+        };
+        function myFunction() {
+            alert("Clicked");
+        }
+    </script>
+    <style>
+        /* Khai báo các quy tắc CSS */
+        body {
+            width: 80%;
+            margin: 0 auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        button {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: #aa2b04;
+            color: white;
+        }
+
+        .cancelbtn {
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AIMS System - Team 9</h1>
+    <h2>Giao dịch được thực hiện thành công. Cảm ơn quý khách đã sử dụng dịch vụ</h2>
+    <table>
+        <tr>
+            <th id="name_col">Name</th>
+            <th id="value-col">Value</th>
+        </tr>
+        <tr>
+            <td>Merchant ID</td>
+            <td id='vnp_TmnCode'></td>
+        </tr>
+        <tr>
+            <td>Merchant Name</td>
+            <td>VN Pay Information</td>
+        </tr>
+        <tr>
+            <td>Merchant Transaction Reference</td>
+            <td id='vnp_TxnRef'></td>
+        </tr>
+        <tr>
+            <td>Transaction Info</td>
+            <td id='vnp_OrderInfo'></td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td id='vnp_Amount'></td>
+        </tr>
+        <tr>
+            <td>Current Code</td>
+            <td>VND</td>
+        </tr>
+        <tr>
+            <td>Transaction Response Code</td>
+            <td id='vnp_ResponseCode'></td>
+        </tr>
+
+        <tr>
+            <td>Message</td>
+            <td>Giao dịch được thực hiện thành công. Cảm ơn quý khách đã sử dụng dịch vụ</td>
+        </tr>
+        <tr>
+            <td>Transaction Number</td>
+            <td id='vnp_TransactionNo'></td>
+        </tr>
+        <tr>
+            <td>Bank</td>
+            <td id='vnp_BankCode'></td>
+        </tr>
+        <!-- Thêm các hàng khác tùy ý -->
+    </table>
+    
+     <div class="cancelbtn">
+        <form method="POST" action="/vnpay_jsp/vnpay_return.jsp">
+            <button class="button" type="submit">Bấm nút</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
