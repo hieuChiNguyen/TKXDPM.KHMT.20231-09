@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fce4f6f3-f333-46f2-9928-9fcd1d6e84d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/screen/invoice/OnClickConfirm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIMS-Student.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AIMS-Student.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/db/aims.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/db/aims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ValidatePhoneNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ValidatePhoneNumberTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/AimsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/AimsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/AnonymousTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/AnonymousTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InternalServerErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InternalServerErrorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidDeliveryInfoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidDeliveryInfoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/InvalidVersionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/InvalidVersionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/MediaNotAvailableException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/MediaNotAvailableException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/MediaUpdateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/MediaUpdateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/NotEnoughBalanceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/NotEnoughTransactionInfoException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/PaymentException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/PaymentException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/PlaceOrderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/PlaceOrderException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ProcessInvoiceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ProcessInvoiceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ProcessingException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ProcessingException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/RejectedTransactionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/RejectedTransactionException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/TransactionFailedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/TransactionFailedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/TransactionNotDoneException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/TransactionNotDoneException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/TransactionReverseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/TransactionReverseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/UnrecognizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/UnrecognizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/exception/ViewCartException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/common/exception/ViewCartException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/PaymentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/PlaceOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/controller/ViewCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/controller/ViewCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/cart/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/cart/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/cart/CartMedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/cart/CartMedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/db/AIMSDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/db/AIMSDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/invoice/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/invoice/Invoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/CD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/CD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/DVD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/media/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/media/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/order/OrderMedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/order/OrderMedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/payment/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/payment/CreditCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/payment/PaymentTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/payment/PaymentTransaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/shipping/DeliveryInfor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entity/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entity/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/VNPaySubsystemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/ConfigVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/RequestVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/RequestVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/ResponseVNPay.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/ResponseVNPay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPayBoundary.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPayBoundary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPaySubsystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/subsystem/vnpay/VNPaySubsystemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/API.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/API.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/Configs.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/Configs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/MyMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/MyMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/fxml/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/fxml/invoice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/invoice.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/payment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/fxml/popup_rushshipping.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/fxml/popup_rushshipping.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/BaseScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/BaseScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/FXMLScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/FXMLScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/SplashScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/SplashScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/cart/CartScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/cart/CartScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/cart/MediaHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/cart/MediaHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/home/HomeScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/home/HomeScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/home/MediaHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/home/MediaHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/InvoiceScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/MediaInvoiceScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/MediaInvoiceScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/PopupRushShipping$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/PopupRushShipping$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/PopupRushShipping$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/PopupRushShipping$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/invoice/PopupRushShipping.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/invoice/PopupRushShipping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/payment/PaymentScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/payment/PaymentScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/payment/ResultScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/payment/ResultScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/popup/PopupScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/popup/PopupScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/views/screen/shipping/ShippingScreenHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/views/screen/shipping/ShippingScreenHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/NotEnoughBalanceException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exception/NotEnoughTransactionInfoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/PlaceOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/db/AIMSDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/db/AIMSDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/invoice/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/invoice/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/order/OrderMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/shipping/DeliveryInfor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/shipping/DeliveryInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/subsystem/vnpay/RequestVNPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/subsystem/vnpay/RequestVNPay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Configs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/invoice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/invoice.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/payment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/fxml/popup_rushshipping.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/fxml/popup_rushshipping.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/BaseScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/BaseScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/cart/CartScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/cart/CartScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/home/HomeScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/invoice/InvoiceScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/invoice/InvoiceScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/invoice/MediaInvoiceScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/invoice/MediaInvoiceScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/invoice/PopupRushShipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/invoice/PopupRushShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/payment/PaymentScreenHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/screen/popup/PopupScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/screen/popup/PopupScreen.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ZAGxmEAVF5POYKvKLMIFZRvSuw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/20231/Project III/MedX-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Personal\AIMS-Student\src\common\exception" />
+      <recent name="D:\Personal\AIMS-Student\src\subsystem" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="common.exception" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="AIMS-Student" />
+      <option name="VM_PARAMETERS" value="--module-path D:\TKXDPM.KHMT.20231-20200226.NguyenChiHieu-connect-vnpay-final\TKXDPM.KHMT.20231-20200226.NguyenChiHieu-connect-vnpay-final\Program\AIMS-Student\lib\win\javafx-sdk-15\lib --add-modules javafx.controls,javafx.fxml,javafx.web" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fce4f6f3-f333-46f2-9928-9fcd1d6e84d8" name="Changes" comment="" />
+      <created>1701857741380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701857741380</updated>
+      <workItem from="1704298688532" duration="4828000" />
+      <workItem from="1704331618358" duration="34965000" />
+      <workItem from="1704427034327" duration="4712000" />
+      <workItem from="1704434838299" duration="461000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
