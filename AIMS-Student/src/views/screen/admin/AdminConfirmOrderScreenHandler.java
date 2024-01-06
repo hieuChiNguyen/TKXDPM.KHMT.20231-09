@@ -27,6 +27,7 @@ public class AdminConfirmOrderScreenHandler{
     @FXML private TableColumn<Order, String> col_province;
     @FXML private TableColumn<Order, String> col_status;
     @FXML private TableColumn<Order, String> col_phone;
+    @FXML private TableColumn<Order, String> col_address;
 
     @FXML private Button cancelOrderBtn;
     @FXML private Button acceptOrderBtn;
@@ -87,6 +88,7 @@ public class AdminConfirmOrderScreenHandler{
         col_instructions.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDeliveryInfo().getShippingInstruction()));
         col_status.setCellValueFactory(new PropertyValueFactory<>("status"));
         col_phone.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDeliveryInfo().getPhoneNumber()));
+        col_address.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDeliveryInfo().getShippingAddress()));
 
         // Lấy dữ liệu từ bảng Order và cập nhật TableView
 //        ObservableList<Order> orderData = FXCollections.observableArrayList(Order.getAllOrders());
