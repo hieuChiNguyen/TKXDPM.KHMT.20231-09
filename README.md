@@ -225,6 +225,47 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
     - Tìm lỗi trong base code và sửa nếu vi phạm nguyên tắc Open/closed principle
 
 </details>
+
+<details>
+  <summary>W4-W5-W6: 18/12/2023~06/01/2024 </summary>
+<br>
+<details>
+<summary>Nguyễn Cao Bảo Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tiếp tục hoàn thiện tất cả đầu việc đã nhận
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+
+</details>
+
+<details>
+<summary>Nguyễn Chí Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tiếp tục hoàn thiện tất cả đầu việc đã nhận
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Specific implementation details:
+
+</details>
+<details>
+<summary>Nguyễn Đình Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tiếp tục hoàn thiện tất cả đầu việc đã nhận
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/13
+  - Specific implementation details:
+
+</details>
 </details>
 ---
 
