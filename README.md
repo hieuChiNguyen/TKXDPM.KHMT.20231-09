@@ -271,6 +271,19 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 
 </details>
 
+<details>
+<summary>Phạm Minh Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Tiếp tục hoàn thiện tất cả đầu việc đã nhận
+
+- Implementation details:
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()s
+  - Specific implementation details:
+
+</details>
+
 ---
 
 ## Mẫu pull request
