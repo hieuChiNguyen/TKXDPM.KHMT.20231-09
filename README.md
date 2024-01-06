@@ -227,6 +227,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 </details>
 
 </details>
+
 ---
 
 <details>
@@ -269,6 +270,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Specific implementation details:
 
 </details>
+
 ---
 
 ## Mẫu pull request
