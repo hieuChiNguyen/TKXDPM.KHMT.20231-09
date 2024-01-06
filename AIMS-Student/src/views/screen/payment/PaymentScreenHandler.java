@@ -47,7 +47,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 		WebView paymentView = new WebView();
 		WebEngine webEngine = paymentView.getEngine();
 		webEngine.load(
-				((PaymentController) getBController()).generateURL(invoice.getTotalPrice(), "Thanh toán hóa đơn"));
+				((PaymentController) getBController()).generateURL(invoice.calculateTotalPrice(), "Thanh toán hóa đơn"));
 		webEngine.locationProperty().addListener((observable, oldValue, newValue) -> {
 			handleUrlChanged(newValue);
 		});
