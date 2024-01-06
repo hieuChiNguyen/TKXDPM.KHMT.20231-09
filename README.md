@@ -288,14 +288,17 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
 ---
 
 <details>
-<summary>Tổng kết</summary>
+  <summary> Tổng kết </summary>
 <br>
+
 - Nguyễn Chí Hiếu 30%
 - Nguyễn Cao Bảo Hiếu 28%
 - Nguyễn Đình Hiếu 23%
 - Phạm Minh Hiếu 19%
   
 </details>
+
+---
 
 ## Mẫu pull request
 
