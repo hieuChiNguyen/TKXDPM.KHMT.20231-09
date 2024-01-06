@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import controller.AdminConfirmOrderController;
 import controller.PaymentController;
 import entity.invoice.Invoice;
 import entity.order.Order;
@@ -33,6 +34,8 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 	private VBox vBox;
 	
 	private Order order;
+
+	private AdminConfirmOrderController adminConfirmOrderController = new AdminConfirmOrderController();
 	
 	private int id;
 
@@ -78,7 +81,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 				Map<String, String> params = parseQueryString(query);
 
 				confirmToPayOrder(params);
-                Integer id = Order.saveNewOrder(order);
+                Integer id = adminConfirmOrderController.saveNewOrder(order);
 				// Gửi URI đến email
 				sendEmailWithURI(uri.toString(), id);
 			} catch (URISyntaxException | IOException e) {
@@ -113,7 +116,7 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 		String senderPassword = "gwni riqq zzwo lljq";
 
 		// Thông tin tài khoản email đích
-		String recipientEmail = "baohieu888@gmail.com";
+		String recipientEmail = "nguyenchihieu1707@gmail.com";
 
 		// Cấu hình Java Mail
 		Properties props = new Properties();
