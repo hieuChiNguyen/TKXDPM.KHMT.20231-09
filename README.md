@@ -265,7 +265,7 @@ Nội dung báo cáo các tuần của nhóm: Wxx: from date ~ to date
   - Tiếp tục hoàn thiện tất cả đầu việc đã nhận
 
 - Implementation details:
-  - Pull Request(s): https://github.com/hieuChiNguyen/TKXDPM.KHMT.20231-09/pull/13
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()s
   - Specific implementation details:
 
 </details>
