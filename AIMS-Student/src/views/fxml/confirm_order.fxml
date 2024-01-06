@@ -44,9 +44,9 @@
                      <children>
                         <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="563.0" prefWidth="1102.0">
                            <children>
-                              <ScrollPane fitToWidth="true" prefHeight="454.0" prefWidth="890.0">
+                              <ScrollPane fitToWidth="true" prefHeight="454.0" prefWidth="1061.0">
                                  <content>
-                                    <TableView fx:id="tableview" prefHeight="453.0" prefWidth="889.0" style="-fx-font-size: 15px;" styleClass="shadow">
+                                    <TableView fx:id="tableview" prefHeight="453.0" prefWidth="967.0" style="-fx-font-size: 15px;" styleClass="shadow">
                                        <columns>
                                           <TableColumn fx:id="col_num" editable="false" prefWidth="48.800019800662994" resizable="false" style="-fx-alignment: center;" text="Id" />
                                           <TableColumn fx:id="col_customer" editable="false" prefWidth="167.99999237060547" resizable="false" style="-fx-alignment: center;" text="Email Khách hàng" />
@@ -54,6 +54,7 @@
                                           <TableColumn fx:id="col_instructions" editable="false" prefWidth="201.5999755859375" resizable="false" style="-fx-alignment: center;" text="Chỉ dẫn giao hàng" />
                                           <TableColumn fx:id="col_status" editable="false" prefWidth="156.79998779296875" resizable="false" style="-fx-alignment: center;" text="Trạng thái" />
                                           <TableColumn fx:id="col_phone" editable="false" prefWidth="156.79998779296875" resizable="false" style="-fx-alignment: center;" text="Số điện thoại" />
+                                          <TableColumn fx:id="col_address" editable="false" prefWidth="156.79998779296875" resizable="false" style="-fx-alignment: center;" text="Địa chỉ" />
                                        </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
