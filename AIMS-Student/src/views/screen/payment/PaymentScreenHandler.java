@@ -81,13 +81,13 @@ public class PaymentScreenHandler extends BaseScreenHandler {
 				Map<String, String> params = parseQueryString(query);
 
 				confirmToPayOrder(params);
-                Integer id = adminConfirmOrderController.saveNewOrder(order);
+                		Integer id = adminConfirmOrderController.saveNewOrder(order);
 				// Gửi URI đến email
 				sendEmailWithURI(uri.toString(), id);
 			} catch (URISyntaxException | IOException e) {
 				e.printStackTrace();
 			} catch (SQLException e) {
-                throw new RuntimeException(e);
+                		throw new RuntimeException(e);
 			}
 		}
 	}
