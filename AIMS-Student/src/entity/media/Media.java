@@ -80,7 +80,8 @@ public class Media {
                 .setPrice(res.getInt("price"))
                 .setType(res.getString("type"));
             int weight = new Random().nextInt(5) + 1;
-            boolean isRush = new Random().nextBoolean();
+            //boolean isRush = new Random().nextBoolean();
+            Boolean isRush =true;
             media.setWeight(weight);
             media.setSupportRushShipping(isRush);
             medium.add(media);
