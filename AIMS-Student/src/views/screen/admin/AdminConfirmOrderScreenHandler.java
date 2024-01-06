@@ -35,15 +35,15 @@ public class AdminConfirmOrderScreenHandler{
 
     private AdminConfirmOrderController adminConfirmOrderController = new AdminConfirmOrderController();
 
-    public void initView() throws IOException, SQLException {
-//        this.orderMediaDetails = orderMediaDetails;
-        initializeTableView();
+    public void initView() throws IOException, SQLException {;
+        displayListOrders();
 
         tableview.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 // Lấy đơn hàng được chọn
                 selectedOrder = newSelection;
             }
+//            displayDetailOrder();
         });
 
         acceptOrderBtn.setOnMouseClicked(mouseEvent -> {
@@ -51,8 +51,8 @@ public class AdminConfirmOrderScreenHandler{
                 // Lấy id của đơn hàng được chọn và cập nhật trạng thái
                 int orderId = selectedOrder.getId();
                 try {
-                    Order.updateOrderStatus(orderId, "ĐÃ DUYỆT");
-                    ObservableList<Order> orderData = FXCollections.observableArrayList(Order.getAllOrders());
+                    adminConfirmOrderController.updateOrderStatus(orderId, "ĐÃ DUYỆT");
+                    ObservableList<Order> orderData = adminConfirmOrderController.getAllOrders();
                     tableview.setItems(orderData);
                     PopupScreen.success("Đã duyệt đơn hàng thành công");
                     LOGGER.info("Order accepted");
@@ -67,8 +67,8 @@ public class AdminConfirmOrderScreenHandler{
                 // Lấy id của đơn hàng được chọn và cập nhật trạng thái
                 int orderId = selectedOrder.getId();
                 try {
-                    Order.updateOrderStatus(orderId, "ĐÃ TỪ CHỐI");
-                    ObservableList<Order> orderData = FXCollections.observableArrayList(Order.getAllOrders());
+                    adminConfirmOrderController.updateOrderStatus(orderId, "ĐÃ TỪ CHỐI");
+                    ObservableList<Order> orderData = adminConfirmOrderController.getAllOrders();
                     tableview.setItems(orderData);
                     PopupScreen.success("Từ chối đơn hàng thành công");
                     LOGGER.info("Order canceled");
@@ -79,7 +79,7 @@ public class AdminConfirmOrderScreenHandler{
         });
     }
 
-    public void initializeTableView() throws SQLException {
+    public void displayListOrders() throws SQLException {
         // Khởi tạo các cột
         col_num.setCellValueFactory(new PropertyValueFactory<>("id"));
         col_customer.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDeliveryInfo().getEmail()));
@@ -92,6 +92,10 @@ public class AdminConfirmOrderScreenHandler{
 //        ObservableList<Order> orderData = FXCollections.observableArrayList(Order.getAllOrders());
         ObservableList<Order> orderData = adminConfirmOrderController.getAllOrders();
         tableview.setItems(orderData);
+    }
+
+    public void displayDetailOrder() {
+
     }
 
 }
