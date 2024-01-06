@@ -42,7 +42,7 @@
             </HBox>
 	            <HBox fx:id="acceptOrderBox" alignment="CENTER_LEFT" fillHeight="false" prefHeight="60.0" prefWidth="198.0">
                <children>
-	                  <Button fx:id="overviewBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="192.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="Transpaent_button" text="    Overview" HBox.hgrow="ALWAYS">
+	                  <Button fx:id="overviewBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="192.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="Transpaent_button" text="    Tổng quan" HBox.hgrow="ALWAYS">
 	                        <graphic>
 		                        <ImageView fitHeight="39.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
 		                           <image>
@@ -61,7 +61,7 @@
 	            </HBox>
 	            <HBox fx:id="pendingOrderBox" alignment="CENTER_LEFT" fillHeight="false" prefHeight="60.0" prefWidth="198.0">
                <children>
-	                  <Button fx:id="confirmOrderBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="175.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="Transpaent_button" text="    Confirm Order">
+	                  <Button fx:id="confirmOrderBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="175.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="Transpaent_button" text="    Đơn hàng">
 	                     <graphic>
 	                        <ImageView fitHeight="40.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
 	                           <image>
@@ -88,7 +88,7 @@
 	            </HBox>
 	            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="198.0">
                <children>
-      	                  <Button fx:id="logoutBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="204.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="Transpaent_button" text="    Back">
+      	                  <Button fx:id="logoutBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="47.0" prefWidth="204.0" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="Transpaent_button" text="    Về trang chủ">
       	                     <graphic>
       	                        <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
       	                           <image>
